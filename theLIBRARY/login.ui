@@ -16,10 +16,10 @@
   <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
-     <width>1261</width>
-     <height>611</height>
+     <x>130</x>
+     <y>40</y>
+     <width>1101</width>
+     <height>551</height>
     </rect>
    </property>
    <property name="styleSheet">

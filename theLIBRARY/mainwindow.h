@@ -6,8 +6,10 @@
 #include <QListWidgetItem>
 
 #include <addbook.h>
+#include <updatebook.h>
 #include <allbooks.h>
 #include <allmembers.h>
+
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -25,8 +27,9 @@ public:
     void search_a_Book();
     void remove_a_Book();
 
-    void loadbooks();
+    //void loaditem();
     void displayBookDetails();
+    void update_a_Book();
 
 
 
@@ -39,6 +42,8 @@ private slots:
 private:
     Ui::MainWindow *ui;
     AddBook *admin_addbook;
+    updatebook *admin_updatebook;
+
     QVector <AllBooks*> booklist;
     QVector <AllMembers*> memberslist;
 

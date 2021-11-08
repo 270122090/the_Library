@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1879</width>
+    <width>980</width>
     <height>807</height>
    </rect>
   </property>
@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>10</y>
-      <width>201</width>
-      <height>741</height>
+      <y>90</y>
+      <width>250</width>
+      <height>511</height>
      </rect>
     </property>
     <property name="maximumSize">
@@ -38,152 +38,127 @@
     <property name="frameShadow">
      <enum>QFrame::Plain</enum>
     </property>
-    <widget class="QFrame" name="LibraryFrame">
+    <widget class="QListWidget" name="listBooks">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>140</y>
+       <width>231</width>
+       <height>361</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Yu Gothic UI&quot;;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::VLine</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>231</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Yu Gothic UI&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;the_LIST&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;Books&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
        <x>20</x>
-       <y>30</y>
-       <width>141</width>
-       <height>431</height>
+       <y>100</y>
+       <width>71</width>
+       <height>21</height>
       </rect>
      </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
      </property>
-     <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Yu Gothic UI&quot;;</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_2">
-      <property name="spacing">
-       <number>0</number>
-      </property>
-      <property name="leftMargin">
-       <number>0</number>
-      </property>
-      <property name="topMargin">
-       <number>0</number>
-      </property>
-      <property name="rightMargin">
-       <number>0</number>
-      </property>
-      <property name="bottomMargin">
-       <number>0</number>
-      </property>
-      <item>
-       <widget class="QLabel" name="LibraryHeading">
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">background: rgba(40, 83, 107, 1);
-font: 75 9pt &quot;Yu Gothic UI&quot;;
-color: white;</string>
-        </property>
-        <property name="text">
-         <string>BOOKS</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QFrame" name="LibraryBackground">
-        <property name="styleSheet">
-         <string notr="true">background-color: rgb(255, 255, 255);
-background-color: rgb(229, 225, 214);</string>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::StyledPanel</enum>
-        </property>
-        <property name="frameShadow">
-         <enum>QFrame::Raised</enum>
-        </property>
-        <widget class="QPushButton" name="pushButton_13">
-         <property name="geometry">
-          <rect>
-           <x>11</x>
-           <y>60</y>
-           <width>83</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font: 9pt &quot;Yu Gothic UI&quot;;
-color: rgb(0, 0, 0);</string>
-         </property>
-         <property name="text">
-          <string>ISSUE A BOOK</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="btnAddBook">
-         <property name="geometry">
-          <rect>
-           <x>11</x>
-           <y>16</y>
-           <width>75</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>ADD A BOOK</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_16">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>100</y>
-           <width>97</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font: 9pt &quot;Yu Gothic UI&quot;;
-color: rgb(0, 0, 0);
-</string>
-         </property>
-         <property name="text">
-          <string>UPDATE A BOOK</string>
-         </property>
-        </widget>
-        <widget class="QPushButton" name="pushButton_15">
-         <property name="geometry">
-          <rect>
-           <x>11</x>
-           <y>192</y>
-           <width>75</width>
-           <height>23</height>
-          </rect>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">font: 9pt &quot;Yu Gothic UI&quot;;
-color: rgb(0, 0, 0);
-</string>
-         </property>
-         <property name="text">
-          <string>DUE DATES</string>
-         </property>
-        </widget>
-       </widget>
-      </item>
-     </layout>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Book Title &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>100</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <italic>false</italic>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;Yu Gothic UI&quot;;</string>
+     </property>
+     <property name="text">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+     </property>
+    </widget>
+    <widget class="Line" name="line">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>231</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
     </widget>
    </widget>
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>230</x>
-      <y>10</y>
-      <width>741</width>
-      <height>741</height>
+      <x>280</x>
+      <y>90</y>
+      <width>691</width>
+      <height>511</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(223, 233, 239);</string>
+     <string notr="true">background-color: rgb(223, 233, 239);
+border: 1px solid #000000;
+box-sizing: border-box;</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -191,21 +166,11 @@ color: rgb(0, 0, 0);
     <property name="frameShadow">
      <enum>QFrame::Plain</enum>
     </property>
-    <widget class="QListWidget" name="listBooks">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>70</y>
-       <width>256</width>
-       <height>431</height>
-      </rect>
-     </property>
-    </widget>
     <widget class="QFrame" name="searchFrame">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>530</y>
+       <x>10</x>
+       <y>90</y>
        <width>241</width>
        <height>31</height>
       </rect>
@@ -232,47 +197,61 @@ background-color: rgb(246, 240, 237);</string>
       </property>
      </widget>
     </widget>
-    <widget class="QLabel" name="lblImage">
-     <property name="geometry">
-      <rect>
-       <x>550</x>
-       <y>360</y>
-       <width>121</width>
-       <height>221</height>
-      </rect>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Panel</enum>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btnLoadBooks">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>40</y>
-       <width>261</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string>Load All Books</string>
-     </property>
-    </widget>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>70</y>
+       <x>10</x>
+       <y>140</y>
        <width>381</width>
        <height>281</height>
       </rect>
      </property>
      <layout class="QGridLayout" name="gridLayout">
-      <item row="2" column="1">
-       <widget class="QLabel" name="lblDewey">
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_3">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Author:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="font">
+         <font>
+          <family>Yu Gothic UI</family>
+          <pointsize>11</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">font: 11pt &quot;Yu Gothic UI&quot;;</string>
+        </property>
+        <property name="text">
+         <string>Title:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QLabel" name="label_6">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>ID :</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLabel" name="lblBookTitle">
         <property name="font">
          <font>
           <pointsize>12</pointsize>
@@ -298,15 +277,60 @@ background-color: rgb(246, 240, 237);</string>
         </property>
        </widget>
       </item>
-      <item row="1" column="0">
-       <widget class="QLabel" name="label_3">
+      <item row="5" column="0">
+       <widget class="QLabel" name="label_2">
         <property name="font">
          <font>
           <pointsize>12</pointsize>
          </font>
         </property>
         <property name="text">
-         <string>Author:</string>
+         <string>Copies:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="lblStatus">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Panel</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QLabel" name="lblQuantity">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Panel</enum>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QLabel" name="lbl_ID">
+        <property name="font">
+         <font>
+          <pointsize>12</pointsize>
+         </font>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::Panel</enum>
+        </property>
+        <property name="text">
+         <string/>
         </property>
        </widget>
       </item>
@@ -337,89 +361,8 @@ background-color: rgb(246, 240, 237);</string>
         </property>
        </widget>
       </item>
-      <item row="5" column="1">
-       <widget class="QLabel" name="lblQuantity">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Panel</enum>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="0">
-       <widget class="QLabel" name="label">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Title:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="5" column="0">
-       <widget class="QLabel" name="label_2">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>Copies:</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="0">
-       <widget class="QLabel" name="label_6">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>ID :</string>
-        </property>
-       </widget>
-      </item>
-      <item row="3" column="1">
-       <widget class="QLabel" name="lbl_ID">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Panel</enum>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="0" column="1">
-       <widget class="QLabel" name="lblBookTitle">
-        <property name="font">
-         <font>
-          <pointsize>12</pointsize>
-         </font>
-        </property>
-        <property name="frameShape">
-         <enum>QFrame::Panel</enum>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="1">
-       <widget class="QLabel" name="lblStatus">
+      <item row="2" column="1">
+       <widget class="QLabel" name="lblDewey">
         <property name="font">
          <font>
           <pointsize>12</pointsize>
@@ -438,16 +381,16 @@ background-color: rgb(246, 240, 237);</string>
     <widget class="QPushButton" name="btnSearchBook">
      <property name="geometry">
       <rect>
-       <x>290</x>
-       <y>530</y>
+       <x>260</x>
+       <y>90</y>
        <width>97</width>
        <height>23</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 9pt &quot;Yu Gothic UI&quot;;
-color: rgb(0, 0, 0);
-</string>
+      <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: white;</string>
      </property>
      <property name="text">
       <string>SEARCH A BOOK</string>
@@ -456,19 +399,107 @@ color: rgb(0, 0, 0);
     <widget class="QPushButton" name="btnRemoveBook">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>610</y>
+       <x>400</x>
+       <y>400</y>
        <width>151</width>
        <height>23</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 9pt &quot;Yu Gothic UI&quot;;
-color: rgb(0, 0, 0);
-</string>
+      <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: red;</string>
      </property>
      <property name="text">
-      <string>REMOVE THE  BOOK</string>
+      <string>REMOVE THIS  BOOK</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="lblImage">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>140</y>
+       <width>271</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnAddBook">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>91</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: white;</string>
+     </property>
+     <property name="text">
+      <string>ADD A BOOK</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_13">
+     <property name="geometry">
+      <rect>
+       <x>310</x>
+       <y>20</y>
+       <width>91</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: white;</string>
+     </property>
+     <property name="text">
+      <string>ISSUE A BOOK</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnUpdateBook">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>430</y>
+       <width>151</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: white;</string>
+     </property>
+     <property name="text">
+      <string>UPDATE THIS BOOK</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_15">
+     <property name="geometry">
+      <rect>
+       <x>580</x>
+       <y>20</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: white;</string>
+     </property>
+     <property name="text">
+      <string>DUE DATES</string>
      </property>
     </widget>
    </widget>
@@ -494,9 +525,9 @@ color: rgb(0, 0, 0);
     <property name="geometry">
      <rect>
       <x>980</x>
-      <y>10</y>
+      <y>90</y>
       <width>211</width>
-      <height>741</height>
+      <height>511</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -540,27 +571,6 @@ color: rgb(0, 0, 0);
        <number>0</number>
       </property>
       <item>
-       <widget class="QLabel" name="LibrarianHomeTitle">
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>30</height>
-         </size>
-        </property>
-        <property name="styleSheet">
-         <string notr="true">color: rgb(246, 240, 237);
-font: 75 9pt &quot;Yu Gothic UI&quot;;
-background-color: rgb(42, 83, 106);</string>
-        </property>
-        <property name="text">
-         <string>M E M B E R S</string>
-        </property>
-        <property name="alignment">
-         <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item>
        <widget class="QFrame" name="MemberBackground">
         <property name="styleSheet">
          <string notr="true">background: white;
@@ -572,37 +582,6 @@ background-color: rgb(229, 225, 214);</string>
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QSplitter" name="splitter">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>10</y>
-           <width>113</width>
-           <height>46</height>
-          </rect>
-         </property>
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <widget class="QPushButton" name="pushButton_9">
-          <property name="styleSheet">
-           <string notr="true">font: 9pt &quot;Yu Gothic UI&quot;;
-color: rgb(0, 0, 0);</string>
-          </property>
-          <property name="text">
-           <string>Add Member</string>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="pushButton_10">
-          <property name="styleSheet">
-           <string notr="true">font: 9pt &quot;Yu Gothic UI&quot;;
-color: rgb(0, 0, 0);</string>
-          </property>
-          <property name="text">
-           <string>Edit Member Details</string>
-          </property>
-         </widget>
-        </widget>
        </widget>
       </item>
      </layout>
@@ -611,10 +590,10 @@ color: rgb(0, 0, 0);</string>
    <widget class="QFrame" name="frame_3">
     <property name="geometry">
      <rect>
-      <x>1210</x>
-      <y>10</y>
+      <x>1200</x>
+      <y>90</y>
       <width>661</width>
-      <height>741</height>
+      <height>511</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -626,11 +605,42 @@ color: rgb(0, 0, 0);</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QSplitter" name="splitter">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>113</width>
+       <height>46</height>
+      </rect>
+     </property>
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <widget class="QPushButton" name="pushButton_9">
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Yu Gothic UI&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Add Member</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_10">
+      <property name="styleSheet">
+       <string notr="true">font: 9pt &quot;Yu Gothic UI&quot;;
+color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Edit Member Details</string>
+      </property>
+     </widget>
+    </widget>
    </widget>
    <widget class="QLabel" name="LibrarianAdminHeading">
     <property name="geometry">
      <rect>
-      <x>860</x>
+      <x>380</x>
       <y>0</y>
       <width>209</width>
       <height>30</height>
@@ -654,18 +664,84 @@ color: white;</string>
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QLabel" name="LibraryHeading">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>139</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: white;</string>
+    </property>
+    <property name="text">
+     <string>the_B O O K S</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="LibrarianHomeTitle">
+    <property name="geometry">
+     <rect>
+      <x>980</x>
+      <y>50</y>
+      <width>149</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>16777215</width>
+      <height>30</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(246, 240, 237);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+background-color: rgb(42, 83, 106);</string>
+    </property>
+    <property name="text">
+     <string>the_M E M B E R S</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1879</width>
+     <width>980</width>
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuLibrarian">
+    <property name="title">
+     <string>Librarian</string>
+    </property>
+    <addaction name="actionLoad"/>
+   </widget>
+   <addaction name="menuLibrarian"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionLoad">
+   <property name="text">
+    <string>autoLoadBooks</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>

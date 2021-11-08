@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include <QDir>
 #include <QFileDialog>
+#include <QTextEdit>
 
 
 AddBook::AddBook(AllBooks*& newbook, QWidget *parent) :
@@ -15,10 +16,9 @@ AddBook::AddBook(AllBooks*& newbook, QWidget *parent) :
     this->newbook = &newbook;
     this->bookpath = "none.png";
 
-    connect (ui->btnexitaddbook, &QPushButton::clicked,
-                this, &AddBook::on_btnsavebook_clicked);
+    connect (ui->btnsavebook, &QPushButton::clicked,this, &AddBook::on_btnsavebook_clicked);
     // Exit adding books
-    connect (ui->btnexitaddbook, &QPushButton::clicked,this, &AddBook::on_btnexitaddbook_clicked);
+   // connect (ui->btnexitaddbook, &QPushButton::clicked,this, &AddBook::on_btnexitaddbook_clicked);
 
 
     connect(ui->btnloadbookimage, &QPushButton::clicked, this, &AddBook::loadbookimage);
@@ -41,10 +41,7 @@ AddBook::~AddBook()
 
 
  // Exit adding books
-void AddBook::on_btnexitaddbook_clicked()
-{
-        this->close();
-}
+
 
 void AddBook::on_btnsavebook_clicked()
 {
@@ -59,13 +56,7 @@ void AddBook::on_btnsavebook_clicked()
     if (bookID.trimmed() != "" && bookName.trimmed() != "")
     {
         *newbook = new AllBooks(bookName,bookAuthor,bookDewey,bookStatus,bookID, bookQty, bookpath);
-//        this->ui->txtaddbook->clear();//  clearing text for next book to be added
-//        this->ui->txtaddauthor->clear();
-//        this->ui->txtaddStatus->clear();
-//        this->ui->txtadddewey->clear();
-//        this->ui->txtaddid->clear();
-//        this->ui->addbookimagebox->clear();
-
+        this->close();
     }
     else
     {
