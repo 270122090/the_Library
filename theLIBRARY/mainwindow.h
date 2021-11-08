@@ -21,16 +21,25 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    void add_a_book();
-    void displayBookDetails(QListWidgetItem *books);
+    void add_a_Book();
+    void search_a_Book();
+    void remove_a_Book();
+
+    void loadbooks();
+    void displayBookDetails();
+
+
+
 
 private slots:
+
+
 
 
 private:
     Ui::MainWindow *ui;
     AddBook *admin_addbook;
-    QVector <AllBooks*>booklist;
+    QVector <AllBooks*> booklist;
     QVector <AllMembers*> memberslist;
 
 

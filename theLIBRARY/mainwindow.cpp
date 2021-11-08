@@ -14,16 +14,22 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-   //loadbooks();
-    //ui->listBooks->setCurrentRow(0);
-    //displayBookDetails();
+
+/*     loadbooks();
+     ui->listBooks->setCurrentRow(0);
+     displayBookDetails()*/;
+
+   connect(ui->listBooks, &QListWidget::itemClicked,
+           this, &MainWindow::displayBookDetails);
 
 
-    connect(ui->btnAddBook, &QPushButton::clicked,
-            this, &MainWindow::add_a_book);
+    connect(ui->btnAddBook, &QPushButton::clicked,this, &MainWindow::add_a_Book);
+    connect(ui->btnSearchBook, &QPushButton::clicked, this, &MainWindow:: search_a_Book);
+    connect(ui->btnRemoveBook, &QPushButton::clicked, this, &MainWindow:: remove_a_Book);
 
-    connect(ui->listBooks, &QListWidget::itemClicked,
-            this, &MainWindow::displayBookDetails);
+    connect(ui->btnLoadBooks, &QPushButton::clicked, this, &MainWindow:: loadbooks);
+
+
 
 }
 
@@ -31,9 +37,20 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow()
 {
     delete ui;
+
+//    ui->listBooks->clear();
+
+//        for (int i=0; i< booklist.size();i++)
+//        {
+//            delete booklist.at(i);
+//        }
+
+//    booklist.clear();
+
 }
 
-void MainWindow::add_a_book()
+// Linked to QDialog to add all books and write to file "librarybooks.txt"
+void MainWindow::add_a_Book()
 {
 
     AllBooks* newBook = nullptr;
@@ -47,7 +64,7 @@ void MainWindow::add_a_book()
         ui->listBooks->addItem(newBook->gettitle()+"      " + newBook->getauthor());
     }
 
-    QFile bookfile("librarybooks.txt"); // ensuring this gets filed in my folder for easy sharing
+    QFile bookfile("librarybooks.txt");
     bookfile.open(QIODevice::WriteOnly| QIODevice::Text);
     QTextStream out(&bookfile);
     for(int i=0;i<booklist.size();i++)
@@ -64,20 +81,76 @@ void MainWindow::add_a_book()
         bookfile.close();
 }
 
-void MainWindow::displayBookDetails(QListWidgetItem *books)
+//Search books
+void MainWindow::search_a_Book()
 {
 
-    int index = books->listWidget()->currentRow();
+    QString search=ui->txtSearchBook->text();
+    if (search != "")
+    {
+        for(int i = 0; i < ui->listBooks->count(); i++)
+        {
+            QListWidgetItem* item = ui->listBooks->item(i);
+            item->setBackground(Qt::white);
+        }
+        QList<QListWidgetItem *> list = ui->listBooks->findItems(search, Qt::MatchContains);
+
+        for (int i=0; i<list.count(); i++)
+        {
+            QListWidgetItem* item = list.at(i);
+            item->setBackground(Qt::red);
+        }
+    }
+    else
+    {
+        for(int i = 0; i < ui->listBooks->count(); i++)
+        {
+            QListWidgetItem* item = ui->listBooks->item(i);
+            item->setBackground(Qt::white);
+        }
+    }
+}
 
 
+//Remove selected book from widget
+void MainWindow::remove_a_Book()
+{
+    int index = ui->listBooks->currentRow();
+
+    if (index >= 0)
+    {
+        //remove from vector
+        AllBooks* thebook = booklist.at(index);
+        delete thebook;
+        booklist.removeAt(index);
+
+        //remove from list widget in the UI
+        delete ui->listBooks->currentItem();
+    }
+
+    ui->lblBookTitle->setText("");
+    ui->lblAuthor->setText("");
+    ui->lblDewey->setText("");
+    ui->lblStatus->setText("");
+    ui->lbl_ID->setText("");
+    ui->lblQuantity->setText("");
+
+    QPixmap pixmap("none.png");
+    ui->lblImage->setPixmap(pixmap);
+    ui->lblImage->setScaledContents(true);
+}
+
+
+// Once books are added books are dipslayed in listWidget and relevant data is displayed in relevant txt boxes
+void MainWindow::displayBookDetails()
+{
+    int index = ui->listBooks->currentRow();
     if (index != -1)
 
     {
         AllBooks* currentBook = booklist.at(index);
 
-        if (currentBook != nullptr)
 
-        {
             ui->lblBookTitle->setText(currentBook->gettitle());
             ui->lblAuthor->setText(currentBook->getauthor());
             ui->lblDewey->setText(currentBook->getdewey());
@@ -89,9 +162,35 @@ void MainWindow::displayBookDetails(QListWidgetItem *books)
             QPixmap pixmap(currentBook->getimage());
             ui->lblImage->setPixmap(pixmap);
             ui->lblImage->setScaledContents(true);
-        }
+
 }
 }
 
 
-//loadbooks
+// Display the books
+// Open books from librarybooks.txt
+void MainWindow::loadbooks()
+{
+    QFile inputFile("librarybooks.txt");
+    inputFile.open(QIODevice::ReadOnly | QIODevice::Text);
+
+    QTextStream in(&inputFile);
+
+    while(!in.atEnd())
+    {
+        QString line = in.readLine();
+        QStringList bookinfo = line.split(",");
+
+        //handle list of products ui
+        ui->listBooks->addItem(bookinfo.at(0));
+
+
+        AllBooks* bookproduct = new AllBooks(bookinfo.at(0), bookinfo.at(1),bookinfo.at(2), bookinfo.at(3), bookinfo.at(4), bookinfo.at(5).toInt(), bookinfo.at(6));
+        booklist.push_back(bookproduct);
+    }
+    in.flush();
+    inputFile.close();
+}
+
+
+

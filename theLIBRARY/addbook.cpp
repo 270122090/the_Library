@@ -58,7 +58,7 @@ void AddBook::on_btnsavebook_clicked()
 
     if (bookID.trimmed() != "" && bookName.trimmed() != "")
     {
-        *newbook = new AllBooks(bookName,bookAuthor,bookStatus,bookDewey,bookID, bookQty, bookpath);
+        *newbook = new AllBooks(bookName,bookAuthor,bookDewey,bookStatus,bookID, bookQty, bookpath);
 //        this->ui->txtaddbook->clear();//  clearing text for next book to be added
 //        this->ui->txtaddauthor->clear();
 //        this->ui->txtaddStatus->clear();
