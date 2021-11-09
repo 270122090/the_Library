@@ -33,6 +33,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btnUpdateBook, &QPushButton::clicked, this, &MainWindow:: update_a_Book);
 
     connect(ui->btnAddMember, &QPushButton::clicked,this, &MainWindow::add_a_member);
+    connect(ui->btnSearchMember, &QPushButton::clicked,this, &MainWindow::search_a_member);
 
 
 
@@ -230,6 +231,9 @@ void MainWindow::displayBookDetails()
 //    inputFile.close();
 //}
 
+/*-----------------------------------------------------------------------    M E M B E R     -------------------------------------------------------------------*/
+
+// Member details + list in home page
 void MainWindow::add_a_member()
 {
     AllMembers* newMember = nullptr;
@@ -240,7 +244,7 @@ void MainWindow::add_a_member()
     if (newMember != nullptr)
     {
         memberList.push_back(newMember);
-        ui->listMember->addItem(newMember->getMemberName()+"                                     " + newMember->getPhoneNumber());
+        ui->listMember->addItem("     " + newMember->getMemberName()+"                                          " + newMember->getPhoneNumber()); // space left delibrately
     }
 
     QFile memberFile("members.txt");
@@ -257,4 +261,31 @@ void MainWindow::add_a_member()
         memberFile.close();
 }
 
+// Search Member
+void MainWindow::search_a_member()
+{
+
+    QString search=ui->txtSearchMember->text();
+    if (search != "")
+    {
+        for(int i = 0; i < ui->listMember->count(); i++)
+        {
+            ui->listMember->item(i)->setHidden(false);// found
+
+        }
+    }
+
+    else
+    {
+        for(int i = 0; i < ui->listMember->count(); i++)
+        {
+            QList<QListWidgetItem *> list = ui->listMember->findItems(search, Qt::MatchContains);
+            for(int i = 0; i < list.count(); ++i)
+            {
+            ui->listMember->item(i)->setHidden(true); // not found
+            }
+
+        }
+    }
+}
 

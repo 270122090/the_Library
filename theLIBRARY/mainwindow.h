@@ -29,6 +29,7 @@ public:
     void remove_a_Book();
 
     void add_a_member();
+    void search_a_member();
 
     //void loaditem();
     void displayBookDetails();
