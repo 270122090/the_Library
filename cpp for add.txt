@@ -1,0 +1,36 @@
+//cpp
+
+#include "updatebook.h"
+#include "ui_updatebook.h"
+
+
+updatebook::updatebook(AllBooks* book, QWidget *parent) :
+    QDialog(parent),
+    ui(new Ui::updatebook)
+{
+    ui->setupUi(this);
+    this->updateBook= book;
+    //this->bookpath = "none.png";
+
+    if (updateBook!= nullptr)
+    {
+        ui->uBookTitle->setText(updateBook->gettitle());
+        ui->uAuthor->setText(updateBook->getauthor());
+        //ui->udew->setText(updateBook->getdewey());
+        ui->uID->setText(updateBook->getid());
+        ui->uAuthor->setText(updateBook->getauthor());
+
+        QPixmap pixmap(updateBook->getimage());
+        ui->uImage->setPixmap(pixmap);
+        ui->uImage->setScaledContents(true);
+        //bookpath=updateBook->getimage();
+    }
+    //connect(ui->ULoadImage, &QPushButton::clicked, this,&UpdateItemDialog::confirm); // remember confirm is the function
+    //connect(ui->Updatebutton, &QPushButton::clicked, this,&UpdateItemDialog::newload);
+
+}
+
+updatebook::~updatebook()
+{
+    delete ui;
+}
