@@ -210,15 +210,46 @@ background-color: rgb(246, 240, 237);</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(54, 110, 140, 255), stop:0.747191 rgba(145, 192, 216, 255));
+      <string notr="true">/*background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(54, 110, 140, 255), stop:0.747191 rgba(145, 192, 216, 255));
 
 border-color: rgb(81, 130, 157);
 font: 8pt &quot;Nirmala UI&quot;;
 color: rgb(0, 0, 0);
-border-radius: 10px;</string>
+border-radius: 10px;*/
+
+/*-----QPushButton-----*/
+QPushButton
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(37, 147, 194, 255), stop:1 rgba(45, 196, 226, 255));
+color: rgb(255, 255, 255);
+font: 8pt &quot;Century Gothic&quot;;
+min-width: 80px;
+border-style: solid;
+border-width: 1px;
+border-radius: 10px;
+border-color: rgb(38, 156, 200);
+padding: 5px;}
+
+QPushButton::flat
+{
+background-color: transparent;
+border: none;
+color: #fff;}
+
+QPushButton::disabled
+{
+background-color: rgb(131, 165, 174);
+color: black;
+border-color: black;}
+
+QPushButton::hover
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(47, 160, 194, 255), stop:1 rgba(57, 209, 209, 255));
+border: 1px solid rgb(41, 170, 182);}
+</string>
      </property>
      <property name="text">
-      <string>SEARCH A BOOK</string>
+      <string>Search</string>
      </property>
     </widget>
     <widget class="QPushButton" name="btnRemoveBook">
@@ -269,11 +300,42 @@ font: 75 8pt &quot;Nirmala UI&quot;;</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(54, 110, 140, 255), stop:0.747191 rgba(145, 192, 216, 255));
+      <string notr="true">/*background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(54, 110, 140, 255), stop:0.747191 rgba(145, 192, 216, 255));
 border-color: rgb(81, 130, 157);
 color: rgb(0, 0, 0);
 border-radius: 10px;
-font: 8pt &quot;Nirmala UI&quot;;</string>
+font: 8pt &quot;Nirmala UI&quot;;*/
+
+/*-----QPushButton-----*/
+QPushButton
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(37, 147, 194, 255), stop:1 rgba(45, 196, 226, 255));
+color: rgb(255, 255, 255);
+font: 8pt &quot;Century Gothic&quot;;
+min-width: 80px;
+border-style: solid;
+border-width: 1px;
+border-radius: 10px;
+border-color: rgb(38, 156, 200);
+padding: 5px;}
+
+QPushButton::flat
+{
+background-color: transparent;
+border: none;
+color: #fff;}
+
+QPushButton::disabled
+{
+background-color: rgb(131, 165, 174);
+color: black;
+border-color: black;}
+
+QPushButton::hover
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(47, 160, 194, 255), stop:1 rgba(57, 209, 209, 255));
+border: 1px solid rgb(41, 170, 182);}
+</string>
      </property>
      <property name="text">
       <string>UPDATE THIS BOOK</string>
@@ -865,12 +927,43 @@ background-color: rgb(246, 240, 237);</string>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(54, 110, 140, 255), stop:0.747191 rgba(145, 192, 216, 255));
+      <string notr="true">/*background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(54, 110, 140, 255), stop:0.747191 rgba(145, 192, 216, 255));
 
 border-color: rgb(81, 130, 157);
 font: 8pt &quot;Nirmala UI&quot;;
 color: rgb(0, 0, 0);
-border-radius: 10px;</string>
+border-radius: 10px;*/
+
+/*-----QPushButton-----*/
+QPushButton
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(37, 147, 194, 255), stop:1 rgba(45, 196, 226, 255));
+color: rgb(255, 255, 255);
+font: 8pt &quot;Century Gothic&quot;;
+min-width: 80px;
+border-style: solid;
+border-width: 1px;
+border-radius: 10px;
+border-color: rgb(38, 156, 200);
+padding: 5px;}
+
+QPushButton::flat
+{
+background-color: transparent;
+border: none;
+color: #fff;}
+
+QPushButton::disabled
+{
+background-color: rgb(131, 165, 174);
+color: black;
+border-color: black;}
+
+QPushButton::hover
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(47, 160, 194, 255), stop:1 rgba(57, 209, 209, 255));
+border: 1px solid rgb(41, 170, 182);}
+</string>
      </property>
      <property name="text">
       <string>SEARCH</string>
@@ -1006,7 +1099,7 @@ background-color: rgb(42, 83, 106);</string>
      <x>0</x>
      <y>0</y>
      <width>1754</width>
-     <height>20</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuLibrarian">

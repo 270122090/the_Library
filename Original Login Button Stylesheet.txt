@@ -1,0 +1,12 @@
+border-radius:27px;
+
+font: 12pt "Century Gothic";
+background-color:  rgb(43, 153, 213);
+
+
+QPushButton::hover
+{
+background-color: rgba(183, 134, 32, 20%);
+border: 1px solid #b78620;
+
+}

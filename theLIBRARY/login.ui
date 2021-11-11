@@ -81,18 +81,44 @@ color: rgb(255, 255, 255);</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">border-radius:27px;
-background-color: rgb(43, 153, 213);
+     <string notr="true">
+/*-----QPushButton-----*/
+QPushButton
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(33, 120, 167, 255), stop:1 rgba(43, 153, 213, 255));
+color: #ffffff;
 font: 12pt &quot;Century Gothic&quot;;
+min-width: 80px;
+border-style: solid;
+border-width: 1px;
+border-radius: 27px;
+	border-color: rgb(19, 67, 93);
+padding: 5px;}
 
+QPushButton::flat
+{
+background-color: transparent;
+border: none;
+color: #fff;}
 
+QPushButton::disabled
+{
+background-color: rgb(131, 165, 174);
+color: black;
+border-color: black;}
 
-QPushButton::hover{
-background-color: rgb(30, 144, 154);
-}</string>
+QPushButton::hover
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(47, 160, 194, 255), stop:1 rgba(57, 209, 209, 255));
+border: 1px solid rgb(41, 170, 182);}
+
+</string>
     </property>
     <property name="text">
      <string>Submit</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QLineEdit" name="txtUsername">

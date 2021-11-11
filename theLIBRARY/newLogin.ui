@@ -16,176 +16,47 @@
   <property name="styleSheet">
    <string notr="true">background: url(:/loginImage/Tech-Background.png)</string>
   </property>
-  <widget class="QFrame" name="frame_2">
+  <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>150</x>
-     <y>160</y>
-     <width>461</width>
-     <height>441</height>
+     <x>210</x>
+     <y>130</y>
+     <width>291</width>
+     <height>211</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(44, 44, 44);
-border-radius:19px;</string>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::StyledPanel</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Raised</enum>
-   </property>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>190</x>
-      <y>40</y>
-      <width>201</width>
-      <height>51</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">font: 24pt &quot;Century Gothic&quot;;
-color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Login</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>330</y>
-      <width>311</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-radius:27px;
-background-color: rgb(43, 153, 213);
-font: 12pt &quot;Century Gothic&quot;;
+    <string notr="true">/*-----QGroupBox-----*/
+QGroupBox 
+{
+    border: 1px solid;
+    border-color: #1d1d1d;
+	border-radius: 4px;
+    margin-top: 23px;
+
+}
 
 
+QGroupBox::title  
+{
+    background-color: #002b2b;
+    color: #fff;
+	subcontrol-position: top left;
+    subcontrol-origin: margin;
+    padding: 5px;
+	min-width: 100px;
+	border: 1px solid #1d1d1d;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom: none;
 
-QPushButton::hover{
-background-color: rgb(30, 144, 154);
 }</string>
-    </property>
-    <property name="text">
-     <string>Submit</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="username">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>130</y>
-      <width>341</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: transparent;
-border:none;
-color: rgb(193, 193, 193);
-font: 15pt &quot;Century Gothic&quot;;
-border-bottom: 1px solid rgb(193, 193, 193);
-border-radius:none;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="placeholderText">
-     <string>Username</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="password">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>230</y>
-      <width>341</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: transparent;
-border:none;
-color: rgb(193, 193, 193);
-font: 15pt &quot;Century Gothic&quot;;
-border-bottom: 1px solid rgb(193, 193, 193);
-border-radius:none;</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="echoMode">
-     <enum>QLineEdit::Password</enum>
-    </property>
-    <property name="placeholderText">
-     <string>Password</string>
-    </property>
-   </widget>
-  </widget>
-  <widget class="QToolButton" name="toolButton">
-   <property name="geometry">
-    <rect>
-     <x>190</x>
-     <y>119</y>
-     <width>121</width>
-     <height>121</height>
-    </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">border-radius:60px;
-background-color: rgb(43, 153, 213);</string>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="icon">
-    <iconset>
-     <normaloff>loginImage/astronaut.png</normaloff>loginImage/astronaut.png</iconset>
-   </property>
-   <property name="iconSize">
-    <size>
-     <width>64</width>
-     <height>64</height>
-    </size>
+   <property name="title">
+    <string>GroupBox</string>
    </property>
   </widget>
-  <widget class="QLabel" name="labelBackground">
-   <property name="geometry">
-    <rect>
-     <x>11</x>
-     <y>20</y>
-     <width>731</width>
-     <height>691</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
-   </property>
-   <property name="pixmap">
-    <pixmap resource="login.qrc">:/loginImage/Tech Background.png</pixmap>
-   </property>
-   <property name="scaledContents">
-    <bool>false</bool>
-   </property>
-   <property name="alignment">
-    <set>Qt::AlignCenter</set>
-   </property>
-   <property name="wordWrap">
-    <bool>false</bool>
-   </property>
-  </widget>
-  <zorder>labelBackground</zorder>
-  <zorder>frame_2</zorder>
-  <zorder>toolButton</zorder>
  </widget>
- <resources>
-  <include location="login.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

@@ -17,13 +17,13 @@
    <property name="geometry">
     <rect>
      <x>130</x>
-     <y>0</y>
+     <y>20</y>
      <width>1001</width>
      <height>611</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(223, 233, 239);</string>
+    <string notr="true"/>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -31,47 +31,353 @@
    <property name="frameShadow">
     <enum>QFrame::Plain</enum>
    </property>
-   <widget class="QLineEdit" name="txtaddauthor">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>190</y>
-      <width>271</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtadddewey">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>250</y>
-      <width>271</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="btnloadbookimage">
     <property name="geometry">
      <rect>
-      <x>460</x>
-      <y>330</y>
-      <width>111</width>
-      <height>22</height>
+      <x>610</x>
+      <y>90</y>
+      <width>141</width>
+      <height>31</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/*-----QPushButton-----*/
+QPushButton
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(37, 147, 194, 255), stop:1 rgba(45, 196, 226, 255));
+color: black;
+font: 8pt &quot;Century Gothic&quot;;
+min-width: 80px;
+border-style: solid;
+border-width: 1px;
+border-radius: 5px;
+border-color: rgb(38, 156, 200);
+padding: 5px;}
+
+QPushButton::flat
+{
+background-color: transparent;
+border: none;
+color: #fff;}
+
+QPushButton::disabled
+{
+background-color: rgb(131, 165, 174);
+color: black;
+border-color: black;}
+
+QPushButton::hover
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(47, 160, 194, 255), stop:1 rgba(57, 209, 209, 255));
+border: 1px solid rgb(41, 170, 182);}</string>
     </property>
     <property name="text">
      <string>Upload Image</string>
     </property>
    </widget>
+   <widget class="QLineEdit" name="txtaddbook">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>110</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;
+border:none;
+color: white;
+font: 12pt &quot;Century Gothic&quot;;
+border-bottom: 1px solid rgb(193, 193, 193);
+border-radius:none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Title</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtaddauthor">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>150</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;
+border:none;
+color: white;
+font: 12pt &quot;Century Gothic&quot;;
+border-bottom: 1px solid rgb(193, 193, 193);
+border-radius:none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Author</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtaddid">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>270</y>
+      <width>271</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background: transparent;
+border:none;
+color: white;
+font: 12pt &quot;Century Gothic&quot;;
+border-bottom: 1px solid rgb(193, 193, 193);
+border-radius:none;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="placeholderText">
+     <string>Book ID</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="AddBookFormFrame">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>90</y>
+      <width>331</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(52, 52, 61);
+border-radius: 16px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLineEdit" name="txtaddStatus">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>140</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+border:none;
+color: white;
+font: 12pt &quot;Century Gothic&quot;;
+border-bottom: 1px solid rgb(193, 193, 193);
+border-radius:none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Status</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtadddewey">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>100</y>
+       <width>271</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background: transparent;
+border:none;
+color: white;
+font: 12pt &quot;Century Gothic&quot;;
+border-bottom: 1px solid rgb(193, 193, 193);
+border-radius:none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Dewey</string>
+     </property>
+    </widget>
+    <widget class="QSpinBox" name="spinQty">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>230</y>
+       <width>111</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">/*-----QDoubleSpinBox -*/
+QSpinBox 
+{
+	background-color: #242424;
+	color : #fff;
+	border: 1px solid #1d1d1d;
+	border-radius: 4px;
+	padding: 3px;
+	padding-left: 5px;
+
+}
+
+
+QSpinBox::up-button
+{
+	background-color: #4a5157;
+    width: 16px; 
+	border-top-right-radius: 4px;
+    border-width: 1px;
+	border-color: #1d1d1d;
+
+}
+
+
+QSpinBox::up-button:hover
+{
+	background-color: #585858;
+
+}
+
+QSpinBox::up-button:pressed
+{
+	background-color: #252525;
+    width: 16px; 
+    border-width: 1px;
+
+}
+
+
+ QSpinBox::up-arrow
+{
+    image: url(://arrow-up.png);
+    width: 7px;
+    height: 7px;
+
+}
+
+
+QSpinBox::down-button
+{
+	background-color: #4a5157;
+    width: 16px; 
+    border-width: 1px;
+	border-bottom-right-radius: 4px;
+	border-color: #1d1d1d;
+
+}
+
+
+QSpinBox::down-button:hover
+{
+	background-color: #585858;
+
+}
+
+
+ QSpinBox::down-button:pressed
+{
+	background-color: #252525;
+    width: 16px; 
+    border-width: 1px;
+
+}
+
+
+QSpinBox::down-arrow
+{
+    image: url(://arrow-down.png);
+    width: 7px;
+    height: 7px;
+
+}</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>230</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(193, 193, 193);
+font: 12pt &quot;Century Gothic&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Number of Books</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="addBookTabFrame">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>54</y>
+      <width>191</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(58, 58, 68);
+border-radius: 16px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>171</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);
+font: 75 12pt &quot;Century Gothic&quot;;</string>
+     </property>
+     <property name="text">
+      <string>ADD BOOK</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
    <widget class="QLabel" name="addbookimagebox">
     <property name="geometry">
      <rect>
-      <x>630</x>
-      <y>160</y>
-      <width>111</width>
-      <height>181</height>
+      <x>619</x>
+      <y>159</y>
+      <width>131</width>
+      <height>191</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(75, 75, 88);
+border: none;</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::Box</enum>
@@ -80,169 +386,79 @@
      <string/>
     </property>
    </widget>
-   <widget class="QLineEdit" name="txtaddid">
+   <widget class="QFrame" name="ImageFrame">
     <property name="geometry">
      <rect>
-      <x>300</x>
-      <y>280</y>
-      <width>271</width>
-      <height>21</height>
+      <x>600</x>
+      <y>130</y>
+      <width>171</width>
+      <height>251</height>
      </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtaddbook">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>160</y>
-      <width>271</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>160</y>
-      <width>47</width>
-      <height>14</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Title</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>220</y>
-      <width>47</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Status</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>250</y>
-      <width>47</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Dewey</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>190</y>
-      <width>47</width>
-      <height>14</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Author</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>280</y>
-      <width>47</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ID</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtaddStatus">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>220</y>
-      <width>271</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="LibraryTitle_3">
-    <property name="geometry">
-     <rect>
-      <x>350</x>
-      <y>10</y>
-      <width>209</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>16777215</width>
-      <height>30</height>
-     </size>
     </property>
     <property name="styleSheet">
-     <string notr="true">background: rgba(40, 83, 107, 1);
-font: 75 9pt &quot;Yu Gothic UI&quot;;
-color: white;</string>
+     <string notr="true">background-color: rgb(52, 52, 61);
+border-radius: 16px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnsavebook">
+    <property name="geometry">
+     <rect>
+      <x>270</x>
+      <y>400</y>
+      <width>501</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/*-----QPushButton-----*/
+QPushButton
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(68, 188, 128, 255), stop:1 rgba(76, 209, 143, 255));
+color: black;
+font: 8pt &quot;Century Gothic&quot;;
+min-width: 80px;
+border-style: solid;
+border-width: 1px;
+border-radius: 10px;
+border-color: rgb(38, 156, 200);
+padding: 5px;}
+
+QPushButton::flat
+{
+background-color: transparent;
+border: none;
+color: #fff;}
+
+QPushButton::disabled
+{
+background-color: rgb(131, 165, 174);
+color: black;
+border-color: black;}
+
+QPushButton::hover
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(54, 149, 101, 255), stop:1 rgba(64, 175, 119, 255));
+border: 1px solid rgb(41, 170, 182);}</string>
     </property>
     <property name="text">
-     <string>ADD A BOOK</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+     <string>Save</string>
     </property>
    </widget>
-   <widget class="QSplitter" name="splitter">
-    <property name="geometry">
-     <rect>
-      <x>630</x>
-      <y>380</y>
-      <width>121</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-    <widget class="QPushButton" name="btnsavebook">
-     <property name="text">
-      <string>Save</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QLabel" name="label_6">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>330</y>
-      <width>101</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Number of Books</string>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="spinQty">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>330</y>
-      <width>81</width>
-      <height>22</height>
-     </rect>
-    </property>
-   </widget>
+   <zorder>ImageFrame</zorder>
+   <zorder>addBookTabFrame</zorder>
+   <zorder>AddBookFormFrame</zorder>
+   <zorder>btnloadbookimage</zorder>
+   <zorder>splitter</zorder>
+   <zorder>txtaddbook</zorder>
+   <zorder>txtaddauthor</zorder>
+   <zorder>txtaddid</zorder>
+   <zorder>addbookimagebox</zorder>
   </widget>
  </widget>
  <resources/>
