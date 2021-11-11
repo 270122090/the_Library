@@ -2,6 +2,8 @@
 #include "ui_login.h"
 
 #include <QMessageBox>
+#include <QPixmap>
+
 
 login::login(QWidget *parent) :
     QDialog(parent),
@@ -12,6 +14,17 @@ login::login(QWidget *parent) :
     ui->setupUi(this);
     connect(ui->btnMlogin, &QPushButton::clicked,
             this, &login::userlogin);
+
+    // Login Tech Background
+    QPixmap pix(":/resources/loginImage/Tech-Background.png");
+    ui->labelBackground->setPixmap(pix);
+    ui->labelBackground->setScaledContents(true);
+
+    // Astronaut Icon
+    QPixmap pix2(":/resources/loginImage/astronaut.png");
+    ui->labelAstronaut->setPixmap(pix2);
+    ui->labelAstronaut->setScaledContents(true);
+
 }
 
 

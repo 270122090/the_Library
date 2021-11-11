@@ -1,0 +1,9 @@
+MEMBERS:
+- needs to have option to add address
+
+- when searching for member, maybe have their address instead of phone number as identifier
+  bc it'll save time in exchanging details n young kids usually don't have phones.
+
+- when editting member, all details show be able to be modified bc people get married, 
+  move, upgrade phones & get annoyed at reminders. Print their details but maybe make an option 
+  where you can still retype if needed.
