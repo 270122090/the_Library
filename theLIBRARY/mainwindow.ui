@@ -38,25 +38,6 @@
     <property name="frameShadow">
      <enum>QFrame::Plain</enum>
     </property>
-    <widget class="QListWidget" name="listBooks">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>140</y>
-       <width>231</width>
-       <height>361</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Yu Gothic UI&quot;;</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::VLine</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-    </widget>
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
@@ -145,6 +126,16 @@
       <enum>Qt::Horizontal</enum>
      </property>
     </widget>
+    <widget class="QListWidget" name="listBooks">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>140</y>
+       <width>251</width>
+       <height>361</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
    <widget class="QFrame" name="frame">
     <property name="geometry">
@@ -186,16 +177,6 @@ background-color: rgb(246, 240, 237);</string>
      <property name="frameShadow">
       <enum>QFrame::Plain</enum>
      </property>
-     <widget class="QLineEdit" name="txtSearchBook">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>241</width>
-        <height>31</height>
-       </rect>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="layoutWidget">
      <property name="geometry">
@@ -420,7 +401,7 @@ color: red;</string>
        <x>400</x>
        <y>140</y>
        <width>271</width>
-       <height>171</height>
+       <height>241</height>
       </rect>
      </property>
      <property name="frameShape">
@@ -500,6 +481,16 @@ color: white;</string>
      </property>
      <property name="text">
       <string>DUE DATES</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtSearchBook">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>50</y>
+       <width>241</width>
+       <height>31</height>
+      </rect>
      </property>
     </widget>
    </widget>

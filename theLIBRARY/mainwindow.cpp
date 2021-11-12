@@ -2,7 +2,7 @@
 #include <QTextStream>
 #include <QListWidgetItem>
 #include <QListWidget>
-
+#include <QDate>
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
@@ -17,11 +17,11 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
-      //loaditem();
+     loadbooks();
      ui->listBooks->setCurrentRow(0);
      displayBookDetails();
 
-    //connect(ui->actionLoad, &QAction::triggered,this, &MainWindow::loaditem);
+    connect(ui->actionLoad, &QAction::triggered,this, &MainWindow::loadbooks);
     connect(ui->listBooks, &QListWidget::itemClicked, this, &MainWindow::displayBookDetails);
 
 
@@ -29,8 +29,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btnSearchBook, &QPushButton::clicked, this, &MainWindow:: search_a_Book);
     connect(ui->btnRemoveBook, &QPushButton::clicked, this, &MainWindow:: remove_a_Book);
     connect(ui->btnUpdateBook, &QPushButton::clicked, this, &MainWindow:: update_a_Book);
-
-
 
 
 }
@@ -63,7 +61,7 @@ void MainWindow::add_a_Book()
     if (newBook != nullptr)
     {
         booklist.push_back(newBook);
-        ui->listBooks->addItem(newBook->gettitle()+"                          " + newBook->getauthor());
+        ui->listBooks->addItem(newBook->gettitle()+" " + newBook->getauthor());
     }
 
     QFile bookfile("librarybooks.txt");
@@ -73,9 +71,10 @@ void MainWindow::add_a_Book()
     {
         out << booklist.at(i)->gettitle()<<",";
         out << booklist.at(i)->getauthor()<<",";
-        out << booklist.at(i)->getstatus()<<",";
         out << booklist.at(i)->getdewey()<<",";
+        out << booklist.at(i)->getstatus()<<",";
         out << booklist.at(i)->getid()<<",";
+        out << booklist.at(i)->getqty()<<",";
         out << booklist.at(i)->getimage();
 
     }
@@ -119,29 +118,25 @@ void MainWindow::update_a_Book()
             AllBooks* thebook=booklist.at(index);
             if (thebook !=nullptr)
                 {
-                AllBooks* update = nullptr;
-                updatebook up(update, this);
-                up.setModal(true);
+                //AllBooks* update = nullptr;
+                updatebook up(thebook, nullptr);
+                //up.setModal(true);
                 up.exec();
-                }
-        }
-}
 
                     //update ui
 
-//                    ui->MNamelbl->setText(theItem->getitem());//this is for the main window so that
-//                    ui->MQtylbl->setText(QString:: number(theItem->getqty()));
-//                    out << booklist.at(i)->gettitle()<<",";
-//                    out << booklist.at(i)->getauthor()<<",";
-//                    out << booklist.at(i)->getstatus()<<",";
-//                    out << booklist.at(i)->getdewey()<<",";
-//                    out << booklist.at(i)->getid()<<",";
-//                    out << booklist.at(i)->getimage();
-
-//                    QPixmap pixmap(theItem->getimage());
-//                    ui->MImage->setPixmap(pixmap);
-//                    ui->MImage->setScaledContents(true);
-//                }
+                    ui->lblBookTitle->setText(thebook->gettitle());
+                    ui->lblAuthor->setText(thebook->getauthor());
+                    ui->lblDewey->setText(thebook->getdewey());
+                    ui->lblStatus->setText(thebook->getstatus());
+                    ui->lbl_ID->setText(thebook->getid());
+                    ui->lblQuantity->setText(QString:: number(thebook->getqty()));
+                    QPixmap pixmap(thebook->getimage());
+                    ui->lblImage->setPixmap(pixmap);
+                    ui->lblImage->setScaledContents(true);
+                }
+        }
+}
 
 
 
@@ -201,28 +196,28 @@ void MainWindow::displayBookDetails()
 }
 
 
-// Display the books
-// Open books from librarybooks.txt
-//void MainWindow::loadbooks()
-//{
-//    QFile inputFile("librarybooks.txt");
-//    inputFile.open(QIODevice::ReadOnly | QIODevice::Text);
+ // Display the books
+ // Open books from librarybooks.txt
+void MainWindow::loadbooks()
+{
+    QFile inputFile("librarybooks.txt");
+    inputFile.open(QIODevice::ReadOnly | QIODevice::Text);
 
-//    QTextStream in(&inputFile);
+    QTextStream in(&inputFile);
 
-//    while(!in.atEnd())
-//    {
-//        QString line = in.readLine();
-//        QStringList bookinfo = line.split(",");
+    while(!in.atEnd())
+    {
+        QString line = in.readLine();
+        QStringList bookinfo = line.split(",");
 
-//        //handle list of products ui
-//        ui->listBooks->addItem(bookinfo.at(0));
+        //handle list of products ui
+        ui->listBooks->addItem(bookinfo.at(0));
 
 
-//        AllBooks* bookproduct = new AllBooks(bookinfo.at(0), bookinfo.at(1),bookinfo.at(2), bookinfo.at(3), bookinfo.at(4), bookinfo.at(5).toInt(), bookinfo.at(6));
-//        booklist.push_back(bookproduct);
-//    }
-//    in.flush();
-//    inputFile.close();
-//}
+        AllBooks* bookproduct = new AllBooks(bookinfo.at(0), bookinfo.at(1),bookinfo.at(2), bookinfo.at(3), bookinfo.at(4), bookinfo.at(5).toInt(), bookinfo.at(6));
+        booklist.push_back(bookproduct);
+    }
+    in.flush();
+    inputFile.close();
+}
 
