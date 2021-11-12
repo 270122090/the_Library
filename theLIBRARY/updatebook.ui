@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1103</width>
-    <height>640</height>
+    <height>653</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,9 +17,9 @@
    <property name="geometry">
     <rect>
      <x>60</x>
-     <y>10</y>
+     <y>20</y>
      <width>1001</width>
-     <height>641</height>
+     <height>601</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -31,234 +31,81 @@
    <property name="frameShadow">
     <enum>QFrame::Plain</enum>
    </property>
-   <widget class="QSplitter" name="splitter">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>570</y>
-      <width>150</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="orientation">
-     <enum>Qt::Horizontal</enum>
-    </property>
-   </widget>
    <widget class="QPushButton" name="btnupdatebook">
     <property name="geometry">
      <rect>
       <x>530</x>
-      <y>580</y>
+      <y>520</y>
       <width>150</width>
       <height>23</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 9pt &quot;Yu Gothic UI&quot;;</string>
     </property>
     <property name="text">
      <string>Save</string>
     </property>
    </widget>
-   <widget class="QLabel" name="lbl_ID">
+   <widget class="QSpinBox" name="uQty">
     <property name="geometry">
      <rect>
       <x>400</x>
-      <y>290</y>
-      <width>271</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Panel</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lblBookTitle">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>170</y>
-      <width>271</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Panel</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="addbookimagebox">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>400</y>
-      <width>271</width>
-      <height>171</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Box</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>200</y>
-      <width>47</width>
-      <height>14</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Author</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lblDewey">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>260</y>
-      <width>271</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Panel</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="spinQty">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>340</y>
+      <y>280</y>
       <width>271</width>
       <height>22</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 9pt &quot;Yu Gothic UI&quot;;</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>230</y>
+      <y>190</y>
       <width>47</width>
       <height>16</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 9pt &quot;Yu Gothic UI&quot;;</string>
     </property>
     <property name="text">
      <string>Status</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>290</y>
-      <width>47</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ID</string>
     </property>
    </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>170</y>
+      <y>110</y>
       <width>47</width>
       <height>14</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 9pt &quot;Yu Gothic UI&quot;;</string>
     </property>
     <property name="text">
      <string>Title</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="btnloadbookimage">
-    <property name="geometry">
-     <rect>
-      <x>290</x>
-      <y>400</y>
-      <width>80</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Upload Image</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="lblAuthor">
+   <widget class="QLineEdit" name="uStatus">
     <property name="geometry">
      <rect>
       <x>400</x>
-      <y>200</y>
+      <y>190</y>
       <width>271</width>
       <height>21</height>
      </rect>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>12</pointsize>
-     </font>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::Panel</enum>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtaddStatus">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>230</y>
-      <width>271</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>280</x>
-      <y>260</y>
-      <width>47</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Dewey</string>
     </property>
    </widget>
    <widget class="QLabel" name="LibraryTitle_3">
     <property name="geometry">
      <rect>
-      <x>450</x>
+      <x>390</x>
       <y>20</y>
       <width>209</width>
       <height>30</height>
@@ -286,13 +133,26 @@ color: white;</string>
     <property name="geometry">
      <rect>
       <x>280</x>
-      <y>340</y>
+      <y>280</y>
       <width>101</width>
       <height>16</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true">font: 75 9pt &quot;Yu Gothic UI&quot;;</string>
+    </property>
     <property name="text">
      <string>Number of Books</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="uBookTitle">
+    <property name="geometry">
+     <rect>
+      <x>400</x>
+      <y>110</y>
+      <width>271</width>
+      <height>21</height>
+     </rect>
     </property>
    </widget>
   </widget>

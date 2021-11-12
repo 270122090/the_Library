@@ -14,12 +14,16 @@ class updatebook : public QDialog
     Q_OBJECT
 
 public:
-    explicit updatebook(AllBooks*& update_book, QWidget *parent = nullptr);
+    explicit updatebook (AllBooks* updateBook, QWidget *parent = nullptr);
+
+    void Bookupdate();
 
     ~updatebook();
 
 private:
     Ui::updatebook *ui;
+    AllBooks* updateBook;
+    QString bookpath;
 };
 
 #endif // UPDATEBOOK_H
