@@ -9,6 +9,7 @@
 #include <updatebook.h>
 #include <allbooks.h>
 #include <allmembers.h>
+#include <addmember.h>
 
 
 QT_BEGIN_NAMESPACE
@@ -27,16 +28,12 @@ public:
     void search_a_Book();
     void remove_a_Book();
 
-    void loadbooks();
+    void add_a_member();
+    void search_a_member();
+
+    //void loaditem();
     void displayBookDetails();
     void update_a_Book();
-
-
-
-
-private slots:
-
-
 
 
 private:
@@ -45,7 +42,7 @@ private:
     updatebook *admin_updatebook;
 
     QVector <AllBooks*> booklist;
-    QVector <AllMembers*> memberslist;
+    QVector <AllMembers*> memberList;
 
 
 };
