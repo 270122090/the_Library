@@ -6,6 +6,7 @@
 #include <QDir>
 #include <QFileDialog>
 #include <QTextEdit>
+#include <QComboBox>
 
 
 AddBook::AddBook(AllBooks*& newbook, QWidget *parent) :
@@ -16,17 +17,17 @@ AddBook::AddBook(AllBooks*& newbook, QWidget *parent) :
     this->newbook = &newbook;
     this->bookpath = "none.png";
 
-    connect (ui->btnsavebook, &QPushButton::clicked,this, &AddBook::on_btnsavebook_clicked);
-    // Exit adding books
-   // connect (ui->btnexitaddbook, &QPushButton::clicked,this, &AddBook::on_btnexitaddbook_clicked);
+    ui->addstatus->addItem("On Shelf");
+    ui->addstatus->addItem("On Loan");
+    ui->addstatus->addItem("Reserved");
+    ui->addstatus->addItem("Overdue");
+    ui->addstatus->addItem("Lost/Damaged");
 
-
+    connect (ui->btnsavebook, &QPushButton::clicked,this, &AddBook::save_a_book);
     connect(ui->btnloadbookimage, &QPushButton::clicked, this, &AddBook::loadbookimage);
 
-     QDir pathDir("./images"); // declaring where my images is stored but
-
+    QDir pathDir("./images"); // declaring where my images is stored but
     if(!pathDir.exists()) //the folder doesn't exist
-
     {
         QDir().mkdir("./images"); // then create the folder
     }
@@ -40,22 +41,20 @@ AddBook::~AddBook()
 }
 
 
- // Exit adding books
-
-
-void AddBook::on_btnsavebook_clicked()
+        // writing new book to vector
+void AddBook::save_a_book()
 {
-    QString bookName = ui->txtaddbook->text();//  new variables
+    QString bookName = ui->txtaddbook->text();
     QString bookAuthor = ui->txtaddauthor->text();
-    QString bookStatus= ui->txtaddStatus->text();
+    QString bookStatus= ui->addstatus->currentText();
     QString bookDewey= ui->txtadddewey->text();
     QString bookID = ui->txtaddid->text();
-    int bookQty = ui->spinQty->value();
-    //QString bookpath = "none.png";
+    QString dd = "";
+
 
     if (bookID.trimmed() != "" && bookName.trimmed() != "")
     {
-        *newbook = new AllBooks(bookName,bookAuthor,bookDewey,bookStatus,bookID, bookQty, bookpath);
+        *newbook = new AllBooks(bookName,bookAuthor,bookDewey,bookStatus,bookID,bookpath,dd);
         this->close();
     }
     else

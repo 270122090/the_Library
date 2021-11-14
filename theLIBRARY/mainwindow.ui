@@ -6,711 +6,14 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1754</width>
-    <height>700</height>
+    <width>1038</width>
+    <height>689</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="SideBarFrmae">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>90</y>
-      <width>300</width>
-      <height>511</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>300</width>
-      <height>16777215</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(223, 233, 239);</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <widget class="QListWidget" name="listBooks">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>140</y>
-       <width>271</width>
-       <height>361</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Yu Gothic UI&quot;;</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::VLine</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_8">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>20</y>
-       <width>231</width>
-       <height>61</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Yu Gothic UI</family>
-       <pointsize>10</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Yu Gothic UI&quot;;</string>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;the_LIST&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600; color:#000000;&quot;&gt;Books&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_9">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>100</y>
-       <width>81</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Yu Gothic UI</family>
-       <pointsize>10</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Yu Gothic UI&quot;;</string>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;Book Title &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_10">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>100</y>
-       <width>71</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Yu Gothic UI</family>
-       <pointsize>10</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Yu Gothic UI&quot;;</string>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Author&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="Line" name="line">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>120</y>
-       <width>271</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QFrame" name="frame">
-    <property name="geometry">
-     <rect>
-      <x>330</x>
-      <y>90</y>
-      <width>631</width>
-      <height>511</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(223, 233, 239);
-border: 1px solid #000000;
-box-sizing: border-box;</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Plain</enum>
-    </property>
-    <widget class="QFrame" name="searchFrame">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>90</y>
-       <width>381</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border: 1px solid #000000;
-border-radius: 14px;
-background-color: rgb(246, 240, 237);</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
-     </property>
-     <widget class="QLineEdit" name="txtSearchBook">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>381</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="frame">
-       <bool>false</bool>
-      </property>
-     </widget>
-    </widget>
-    <widget class="QPushButton" name="btnSearchBook">
-     <property name="geometry">
-      <rect>
-       <x>410</x>
-       <y>90</y>
-       <width>131</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">/*background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(54, 110, 140, 255), stop:0.747191 rgba(145, 192, 216, 255));
-
-border-color: rgb(81, 130, 157);
-font: 8pt &quot;Nirmala UI&quot;;
-color: rgb(0, 0, 0);
-border-radius: 10px;*/
-
-/*-----QPushButton-----*/
-QPushButton
-{
-background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(37, 147, 194, 255), stop:1 rgba(45, 196, 226, 255));
-color: rgb(255, 255, 255);
-font: 8pt &quot;Century Gothic&quot;;
-min-width: 80px;
-border-style: solid;
-border-width: 1px;
-border-radius: 10px;
-border-color: rgb(38, 156, 200);
-padding: 5px;}
-
-QPushButton::flat
-{
-background-color: transparent;
-border: none;
-color: #fff;}
-
-QPushButton::disabled
-{
-background-color: rgb(131, 165, 174);
-color: black;
-border-color: black;}
-
-QPushButton::hover
-{
-background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(47, 160, 194, 255), stop:1 rgba(57, 209, 209, 255));
-border: 1px solid rgb(41, 170, 182);}
-</string>
-     </property>
-     <property name="text">
-      <string>Search</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btnRemoveBook">
-     <property name="geometry">
-      <rect>
-       <x>410</x>
-       <y>400</y>
-       <width>151</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(81, 19, 22, 255), stop:0.662921 rgba(173, 60, 63, 255));
-
-
-border-color: rgb(127, 30, 32);
-color: rgb(255, 255, 255);
-border-radius: 10px;
-font: 75 8pt &quot;Nirmala UI&quot;;</string>
-     </property>
-     <property name="text">
-      <string>REMOVE THIS  BOOK</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lblImage">
-     <property name="geometry">
-      <rect>
-       <x>410</x>
-       <y>140</y>
-       <width>151</width>
-       <height>241</height>
-      </rect>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Box</enum>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btnUpdateBook">
-     <property name="geometry">
-      <rect>
-       <x>410</x>
-       <y>430</y>
-       <width>151</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">/*background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(54, 110, 140, 255), stop:0.747191 rgba(145, 192, 216, 255));
-border-color: rgb(81, 130, 157);
-color: rgb(0, 0, 0);
-border-radius: 10px;
-font: 8pt &quot;Nirmala UI&quot;;*/
-
-/*-----QPushButton-----*/
-QPushButton
-{
-background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(37, 147, 194, 255), stop:1 rgba(45, 196, 226, 255));
-color: rgb(255, 255, 255);
-font: 8pt &quot;Century Gothic&quot;;
-min-width: 80px;
-border-style: solid;
-border-width: 1px;
-border-radius: 10px;
-border-color: rgb(38, 156, 200);
-padding: 5px;}
-
-QPushButton::flat
-{
-background-color: transparent;
-border: none;
-color: #fff;}
-
-QPushButton::disabled
-{
-background-color: rgb(131, 165, 174);
-color: black;
-border-color: black;}
-
-QPushButton::hover
-{
-background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(47, 160, 194, 255), stop:1 rgba(57, 209, 209, 255));
-border: 1px solid rgb(41, 170, 182);}
-</string>
-     </property>
-     <property name="text">
-      <string>UPDATE THIS BOOK</string>
-     </property>
-    </widget>
-    <widget class="QFrame" name="frame_4">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>470</y>
-       <width>101</width>
-       <height>25</height>
-      </rect>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>25</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-radius: 12px;</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lblQuantity">
-     <property name="geometry">
-      <rect>
-       <x>140</x>
-       <y>380</y>
-       <width>91</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-radius: 10px;</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Panel</enum>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="margin">
-      <number>1</number>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btnAddBook">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>91</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0.0730337 rgba(178, 123, 112, 255), stop:0.814607 rgba(230, 190, 182, 255));
-border-color: rgb(135, 83, 72);
-font: 8pt &quot;Nirmala UI&quot;;
-color: black;</string>
-     </property>
-     <property name="text">
-      <string>ADD A BOOK</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_13">
-     <property name="geometry">
-      <rect>
-       <x>140</x>
-       <y>10</y>
-       <width>101</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">
-border-color: rgb(135, 83, 72);
-font: 8pt &quot;Nirmala UI&quot;;
-color: black;
-background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0.0730337 rgba(178, 123, 112, 255), stop:0.814607 rgba(230, 190, 182, 255));
-
-</string>
-     </property>
-     <property name="text">
-      <string>ISSUE A BOOK</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_15">
-     <property name="geometry">
-      <rect>
-       <x>320</x>
-       <y>10</y>
-       <width>81</width>
-       <height>23</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0.0730337 rgba(178, 123, 112, 255), stop:0.814607 rgba(230, 190, 182, 255));
-border-color: rgb(135, 83, 72);
-font: 8pt &quot;Nirmala UI&quot;;
-color: black;</string>
-     </property>
-     <property name="text">
-      <string>DUE DATES</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lblStatus">
-     <property name="geometry">
-      <rect>
-       <x>144</x>
-       <y>331</y>
-       <width>91</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-radius: 10px;</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Panel</enum>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_6">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>283</y>
-       <width>38</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border: none;</string>
-     </property>
-     <property name="text">
-      <string>ID :</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>140</y>
-       <width>41</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Yu Gothic UI</family>
-       <pointsize>11</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 11pt &quot;Yu Gothic UI&quot;;
-color: rgb(0, 0, 0);
-border: none;</string>
-     </property>
-     <property name="text">
-      <string>Title:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lblDewey">
-     <property name="geometry">
-      <rect>
-       <x>144</x>
-       <y>236</y>
-       <width>91</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-radius: 10px;</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Panel</enum>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_7">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>330</y>
-       <width>59</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border: none;</string>
-     </property>
-     <property name="text">
-      <string>Status:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>188</y>
-       <width>65</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border: none;</string>
-     </property>
-     <property name="text">
-      <string>Author:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lblBookTitle">
-     <property name="geometry">
-      <rect>
-       <x>144</x>
-       <y>141</y>
-       <width>231</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-radius: 10px;</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Panel</enum>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_5">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>235</y>
-       <width>63</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border: none;</string>
-     </property>
-     <property name="text">
-      <string>Dewey:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>50</x>
-       <y>378</y>
-       <width>63</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(0, 0, 0);
-border: none;</string>
-     </property>
-     <property name="text">
-      <string>Copies:</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lblAuthor">
-     <property name="geometry">
-      <rect>
-       <x>144</x>
-       <y>189</y>
-       <width>231</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-radius: 10px;</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Panel</enum>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-    <widget class="QLabel" name="lbl_ID">
-     <property name="geometry">
-      <rect>
-       <x>144</x>
-       <y>284</y>
-       <width>231</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border-radius: 10px;</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::Panel</enum>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </widget>
    <widget class="QLabel" name="label_4">
     <property name="geometry">
      <rect>
@@ -729,205 +32,829 @@ border: none;</string>
      <string/>
     </property>
    </widget>
-   <widget class="QFrame" name="frame_2">
+   <widget class="QTabWidget" name="the_HOME">
     <property name="geometry">
      <rect>
-      <x>970</x>
-      <y>320</y>
-      <width>631</width>
-      <height>281</height>
+      <x>10</x>
+      <y>10</y>
+      <width>1011</width>
+      <height>621</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(229, 225, 214);</string>
+     <string notr="true"/>
     </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
+    <property name="tabShape">
+     <enum>QTabWidget::Rounded</enum>
     </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
+    <property name="currentIndex">
+     <number>1</number>
     </property>
-    <widget class="QLabel" name="label_11">
-     <property name="geometry">
-      <rect>
-       <x>140</x>
-       <y>10</y>
-       <width>51</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Nirmala UI</family>
-       <pointsize>10</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
+    <property name="iconSize">
+     <size>
+      <width>12</width>
+      <height>12</height>
+     </size>
+    </property>
+    <property name="documentMode">
+     <bool>false</bool>
+    </property>
+    <property name="movable">
+     <bool>true</bool>
+    </property>
+    <widget class="QWidget" name="tab_3">
+     <property name="whatsThis">
+      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#aa007f;&quot;&gt;HOME&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Nirmala UI&quot;;
-color: rgb(0, 0, 0);</string>
+      <string notr="true">background-color: rgb(229, 225, 214);</string>
      </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Name&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="QLabel" name="label_12">
-     <property name="geometry">
-      <rect>
-       <x>450</x>
-       <y>10</y>
-       <width>51</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Nirmala UI</family>
-       <pointsize>10</pointsize>
-       <weight>50</weight>
-       <italic>false</italic>
-       <bold>false</bold>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Nirmala UI&quot;;
-color: rgb(0, 0, 0);</string>
-     </property>
-     <property name="text">
-      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Phone&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-     </property>
-    </widget>
-    <widget class="Line" name="line_2">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>30</y>
-       <width>741</width>
-       <height>2</height>
-      </rect>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>16777215</width>
-       <height>2</height>
-      </size>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
-     </property>
-     <property name="lineWidth">
-      <number>1</number>
-     </property>
-     <property name="orientation">
-      <enum>Qt::Horizontal</enum>
-     </property>
-    </widget>
-    <widget class="QListWidget" name="listMember">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>40</y>
-       <width>601</width>
-       <height>231</height>
-      </rect>
-     </property>
-     <property name="minimumSize">
-      <size>
-       <width>0</width>
-       <height>200</height>
-      </size>
-     </property>
-     <property name="maximumSize">
-      <size>
-       <width>800</width>
-       <height>250</height>
-      </size>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">font: 10pt &quot;Yu Gothic UI&quot;;</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::VLine</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Raised</enum>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QFrame" name="frame_3">
-    <property name="geometry">
-     <rect>
-      <x>970</x>
-      <y>90</y>
-      <width>631</width>
-      <height>191</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(229, 225, 214);</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QFrame" name="searchFrame_2">
-     <property name="geometry">
-      <rect>
-       <x>20</x>
-       <y>20</y>
-       <width>451</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">border: 1px solid #000000;
-border-radius: 14px;
-background-color: rgb(246, 240, 237);</string>
-     </property>
-     <property name="frameShape">
-      <enum>QFrame::StyledPanel</enum>
-     </property>
-     <property name="frameShadow">
-      <enum>QFrame::Plain</enum>
-     </property>
-     <widget class="QLineEdit" name="txtSearchMember">
+     <attribute name="title">
+      <string>Home</string>
+     </attribute>
+     <widget class="QListView" name="listView">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>5</y>
-        <width>421</width>
-        <height>21</height>
+        <x>30</x>
+        <y>140</y>
+        <width>256</width>
+        <height>421</height>
        </rect>
       </property>
-      <property name="accessibleName">
-       <string>Type here</string>
+     </widget>
+     <widget class="QListView" name="listReceivebook">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>140</y>
+        <width>256</width>
+        <height>421</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LibrarianAdminHeading_2">
+      <property name="geometry">
+       <rect>
+        <x>410</x>
+        <y>10</y>
+        <width>209</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
       </property>
       <property name="styleSheet">
-       <string notr="true">border: none;</string>
+       <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: white;</string>
       </property>
-      <property name="frame">
-       <bool>false</bool>
+      <property name="text">
+       <string>LIBRARIAN HOME PAGE</string>
       </property>
-      <property name="clearButtonEnabled">
-       <bool>true</bool>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>850</x>
+        <y>520</y>
+        <width>151</width>
+        <height>34</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: white;</string>
+      </property>
+      <property name="text">
+       <string>Receive Book</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LibraryHeading_3">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>100</y>
+        <width>139</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: white;</string>
+      </property>
+      <property name="text">
+       <string>overdue_B O O K S</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="LibraryHeading_4">
+      <property name="geometry">
+       <rect>
+        <x>430</x>
+        <y>100</y>
+        <width>139</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: white;</string>
+      </property>
+      <property name="text">
+       <string>out_B O O K S</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
       </property>
      </widget>
     </widget>
-    <widget class="QPushButton" name="btnSearchMember">
-     <property name="geometry">
-      <rect>
-       <x>490</x>
-       <y>20</y>
-       <width>121</width>
-       <height>23</height>
-      </rect>
-     </property>
+    <widget class="QWidget" name="books">
      <property name="styleSheet">
-      <string notr="true">/*background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(54, 110, 140, 255), stop:0.747191 rgba(145, 192, 216, 255));
+      <string notr="true">background-color: rgb(229, 225, 214);</string>
+     </property>
+     <attribute name="title">
+      <string>Books</string>
+     </attribute>
+     <widget class="QFrame" name="frame_4">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>60</y>
+        <width>611</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(223, 233, 239);
+border: 1px solid #000000;
+box-sizing: border-box;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <widget class="QPushButton" name="btnRemoveBook">
+       <property name="geometry">
+        <rect>
+         <x>480</x>
+         <y>480</y>
+         <width>117</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: red;</string>
+       </property>
+       <property name="text">
+        <string>REMOVE THIS  BOOK</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lblImage">
+       <property name="geometry">
+        <rect>
+         <x>360</x>
+         <y>120</y>
+         <width>241</width>
+         <height>351</height>
+        </rect>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::Box</enum>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QWidget" name="">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>120</y>
+         <width>341</width>
+         <height>251</height>
+        </rect>
+       </property>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="2" column="1">
+         <widget class="QLabel" name="lblDewey">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_24">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Due Date</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="lblAuthor">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QLabel" name="lblBookTitle">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1">
+         <widget class="QLabel" name="lbldd">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_17">
+          <property name="font">
+           <font>
+            <family>Yu Gothic UI</family>
+            <pointsize>11</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">font: 11pt &quot;Yu Gothic UI&quot;;</string>
+          </property>
+          <property name="text">
+           <string>Title:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_21">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Dewey:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="label_16">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Author:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_18">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>ID :</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_19">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Status:</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLabel" name="lbl_ID">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="lblStatus">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::Panel</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="LibraryHeading_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>139</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: white;</string>
+      </property>
+      <property name="text">
+       <string>the_B O O K S</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>60</y>
+        <width>361</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(223, 233, 239);
+border: 1px solid #000000;
+box-sizing: border-box;</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_25">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>40</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Nirmala UI</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Nirmala UI&quot;;
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Title&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_26">
+       <property name="geometry">
+        <rect>
+         <x>240</x>
+         <y>40</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Nirmala UI</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Nirmala UI&quot;;
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Status&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_27">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>40</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Nirmala UI</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Nirmala UI&quot;;
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ID&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QWidget" name="">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>70</y>
+         <width>341</width>
+         <height>421</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QListWidget" name="listBooks_id"/>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listBooks"/>
+        </item>
+        <item>
+         <widget class="QListWidget" name="listBooks_aut"/>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>10</y>
+        <width>811</width>
+        <height>35</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="btnAddBook">
+         <property name="styleSheet">
+          <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: white;</string>
+         </property>
+         <property name="text">
+          <string>ADD A BOOK</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnIssueBook">
+         <property name="styleSheet">
+          <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: white;</string>
+         </property>
+         <property name="text">
+          <string>ISSUE A BOOK</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnSearchBook">
+         <property name="styleSheet">
+          <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: white;</string>
+         </property>
+         <property name="text">
+          <string>SEARCH A BOOK</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="txtSearchBook"/>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnUpdateBook">
+         <property name="styleSheet">
+          <string notr="true">background: rgba(40, 83, 107, 1);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+color: white;</string>
+         </property>
+         <property name="text">
+          <string>UPDATE THIS BOOK</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Members">
+     <attribute name="title">
+      <string>Members</string>
+     </attribute>
+     <widget class="QFrame" name="frame_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>70</y>
+        <width>451</width>
+        <height>321</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(229, 225, 214);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QLabel" name="label_22">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>10</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Nirmala UI</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Nirmala UI&quot;;
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Name&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_23">
+       <property name="geometry">
+        <rect>
+         <x>340</x>
+         <y>10</y>
+         <width>51</width>
+         <height>21</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Nirmala UI</family>
+         <pointsize>10</pointsize>
+         <weight>50</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 10pt &quot;Nirmala UI&quot;;
+color: rgb(0, 0, 0);</string>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Phone&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+      <widget class="Line" name="line_4">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>30</y>
+         <width>401</width>
+         <height>2</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>2</height>
+        </size>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="lineWidth">
+        <number>1</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="listMember">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>50</y>
+         <width>421</width>
+         <height>231</height>
+        </rect>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QLabel" name="LibrarianHomeTitle_3">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>10</y>
+        <width>149</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>30</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(246, 240, 237);
+font: 75 9pt &quot;Yu Gothic UI&quot;;
+background-color: rgb(42, 83, 106);</string>
+      </property>
+      <property name="text">
+       <string>the_M E M B E R S</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QFrame" name="frame_6">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>70</y>
+        <width>491</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(229, 225, 214);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QFrame" name="searchFrame_4">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>20</y>
+         <width>311</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">border: 1px solid #000000;
+border-radius: 14px;
+background-color: rgb(246, 240, 237);</string>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <widget class="QLineEdit" name="txtSearchMember">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>5</y>
+          <width>291</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="accessibleName">
+         <string>Type here</string>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">border: none;</string>
+        </property>
+        <property name="frame">
+         <bool>false</bool>
+        </property>
+        <property name="clearButtonEnabled">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QPushButton" name="btnSearchMember">
+       <property name="geometry">
+        <rect>
+         <x>350</x>
+         <y>20</y>
+         <width>121</width>
+         <height>23</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/*background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(54, 110, 140, 255), stop:0.747191 rgba(145, 192, 216, 255));
 
 border-color: rgb(81, 130, 157);
 font: 8pt &quot;Nirmala UI&quot;;
@@ -964,133 +891,53 @@ QPushButton::hover
 background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(47, 160, 194, 255), stop:1 rgba(57, 209, 209, 255));
 border: 1px solid rgb(41, 170, 182);}
 </string>
-     </property>
-     <property name="text">
-      <string>SEARCH</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btnEditMember">
-     <property name="geometry">
-      <rect>
-       <x>230</x>
-       <y>150</y>
-       <width>141</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0.0730337 rgba(178, 123, 112, 255), stop:0.814607 rgba(230, 190, 182, 255));
+       </property>
+       <property name="text">
+        <string>SEARCH</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnEditMember">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>70</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0.0730337 rgba(178, 123, 112, 255), stop:0.814607 rgba(230, 190, 182, 255));
 border-color: rgb(135, 83, 72);
 border-radius:14px;
 font: 8pt &quot;Nirmala UI&quot;;
 color: black;</string>
-     </property>
-     <property name="text">
-      <string>Edit Member Details</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="btnAddMember">
-     <property name="geometry">
-      <rect>
-       <x>30</x>
-       <y>150</y>
-       <width>141</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0.0730337 rgba(178, 123, 112, 255), stop:0.814607 rgba(230, 190, 182, 255));
+       </property>
+       <property name="text">
+        <string>Edit Member Details</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btnAddMember">
+       <property name="geometry">
+        <rect>
+         <x>30</x>
+         <y>70</y>
+         <width>141</width>
+         <height>31</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0.0730337 rgba(178, 123, 112, 255), stop:0.814607 rgba(230, 190, 182, 255));
 border-color: rgb(135, 83, 72);
 border-radius:14px;
 font: 8pt &quot;Nirmala UI&quot;;
 color: black;</string>
-     </property>
-     <property name="text">
-      <string>Add Member</string>
-     </property>
+       </property>
+       <property name="text">
+        <string>Add Member</string>
+       </property>
+      </widget>
+     </widget>
     </widget>
-   </widget>
-   <widget class="QLabel" name="LibrarianAdminHeading">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>0</y>
-      <width>1701</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>16777215</width>
-      <height>30</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: rgba(40, 83, 107, 1);
-font: 75 9pt &quot;Yu Gothic UI&quot;;
-color: white;</string>
-    </property>
-    <property name="text">
-     <string>LIBRARIAN HOME PAGE</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="LibraryHeading">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>60</y>
-      <width>301</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>16777215</width>
-      <height>30</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background: rgba(40, 83, 107, 1);
-font: 75 9pt &quot;Yu Gothic UI&quot;;
-color: white;
-</string>
-    </property>
-    <property name="text">
-     <string>S T O C K</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
-   </widget>
-   <widget class="QLabel" name="LibrarianHomeTitle">
-    <property name="geometry">
-     <rect>
-      <x>970</x>
-      <y>290</y>
-      <width>631</width>
-      <height>30</height>
-     </rect>
-    </property>
-    <property name="maximumSize">
-     <size>
-      <width>16777215</width>
-      <height>30</height>
-     </size>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(246, 240, 237);
-font: 75 9pt &quot;Yu Gothic UI&quot;;
-background-color: rgb(42, 83, 106);</string>
-    </property>
-    <property name="text">
-     <string>M E M B E R S</string>
-    </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
-    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -1098,7 +945,7 @@ background-color: rgb(42, 83, 106);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1754</width>
+     <width>1038</width>
      <height>21</height>
     </rect>
    </property>
@@ -1107,6 +954,7 @@ background-color: rgb(42, 83, 106);</string>
      <string>Librarian</string>
     </property>
     <addaction name="actionLoad"/>
+    <addaction name="autoLoadLoans"/>
    </widget>
    <addaction name="menuLibrarian"/>
   </widget>
@@ -1114,6 +962,11 @@ background-color: rgb(42, 83, 106);</string>
   <action name="actionLoad">
    <property name="text">
     <string>autoLoadBooks</string>
+   </property>
+  </action>
+  <action name="autoLoadLoans">
+   <property name="text">
+    <string>autoLoadLoans</string>
    </property>
   </action>
  </widget>

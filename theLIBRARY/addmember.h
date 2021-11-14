@@ -1,6 +1,9 @@
 #ifndef ADDMEMBER_H
 #define ADDMEMBER_H
+
+
 #include "allmembers.h"
+
 #include <QDialog>
 
 namespace Ui {
@@ -16,11 +19,12 @@ public:
     ~addMember();
 
     //void confirmAdd();
+    void on_btnSaveMember_clicked(); // NH moved from private to public
 
 private:
     Ui::addMember *ui;
     AllMembers** newMember;
-    void on_btnSaveMember_clicked();
+
 };
 
 #endif // ADDMEMBER_H

@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     addbook.cpp \
+    addmember.cpp \
     allbooks.cpp \
     allmembers.cpp \
     issuebook.cpp \
@@ -20,6 +21,7 @@ SOURCES += \
 
 HEADERS += \
     addbook.h \
+    addmember.h \
     allbooks.h \
     allmembers.h \
     issuebook.h \
@@ -29,6 +31,7 @@ HEADERS += \
 
 FORMS += \
     addbook.ui \
+    addmember.ui \
     issuebook.ui \
     login.ui \
     mainwindow.ui \
