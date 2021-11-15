@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>updateMember</class>
+ <widget class="QDialog" name="updateMember">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>977</width>
+    <height>621</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLineEdit" name="txtaddbook">
+   <property name="geometry">
+    <rect>
+     <x>162</x>
+     <y>146</y>
+     <width>271</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background: transparent;
+border:none;
+color: white;
+font: 12pt &quot;Century Gothic&quot;;
+border-bottom: 1px solid rgb(193, 193, 193);
+border-radius:none;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="placeholderText">
+    <string>Title</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="sideFrame">
+   <property name="geometry">
+    <rect>
+     <x>660</x>
+     <y>126</y>
+     <width>171</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(52, 52, 61);
+border-radius: 16px;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btnSaveMember">
+   <property name="geometry">
+    <rect>
+     <x>522</x>
+     <y>476</y>
+     <width>311</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">/*-----QPushButton-----*/
+QPushButton
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(68, 188, 128, 255), stop:1 rgba(76, 209, 143, 255));
+color: black;
+font: 8pt &quot;Century Gothic&quot;;
+min-width: 80px;
+border-style: solid;
+border-width: 1px;
+border-radius: 10px;
+border-color: rgb(38, 156, 200);
+padding: 5px;}
+
+QPushButton::flat
+{
+background-color: transparent;
+border: none;
+color: #fff;}
+
+QPushButton::disabled
+{
+background-color: rgb(131, 165, 174);
+color: black;
+border-color: black;}
+
+QPushButton::hover
+{
+background-color: qlineargradient(spread:pad, x1:0, y1:1, x2:0, y2:0, stop:0 rgba(54, 149, 101, 255), stop:1 rgba(64, 175, 119, 255));
+border: 1px solid rgb(41, 170, 182);}</string>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </widget>
+  <widget class="QFrame" name="AddMemberFormFrame">
+   <property name="geometry">
+    <rect>
+     <x>132</x>
+     <y>126</y>
+     <width>511</width>
+     <height>331</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(52, 52, 61);
+border-radius: 16px;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLineEdit" name="txtAddMemberName">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>50</y>
+      <width>421</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+border: 2px solid rgb(96, 101, 124);
+border-radius: 15px;
+color: rgb(255, 255, 255);
+font: 12pt &quot;Century Gothic&quot;;
+padding-left:20px;
+padding-rght: 20px;
+background-color: rgb(95, 95, 112);
+}
+
+
+QLineEdit::hover{
+border: 2px solid rgb(43, 153, 213);
+}
+
+QLineEdit::focus{
+border: 2px solid rgb(170, 255, 255);
+background-color:rgb(43,45,56);
+}</string>
+    </property>
+    <property name="placeholderText">
+     <string>Name</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtAddMemberPhone">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>100</y>
+      <width>421</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+border: 2px solid rgb(96, 101, 124);
+border-radius: 15px;
+color: rgb(255, 255, 255);
+font: 12pt &quot;Century Gothic&quot;;
+padding-left:20px;
+padding-rght: 20px;
+background-color: rgb(95, 95, 112);
+}
+
+
+QLineEdit::hover{
+border: 2px solid rgb(43, 153, 213);
+}
+
+QLineEdit::focus{
+border: 2px solid rgb(170, 255, 255);
+background-color:rgb(43,45,56);
+}</string>
+    </property>
+    <property name="placeholderText">
+     <string>Phone Number</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtAddMemberAddress">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>250</y>
+      <width>421</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+border: 2px solid rgb(96, 101, 124);
+border-radius: 15px;
+color: rgb(255, 255, 255);
+font: 12pt &quot;Century Gothic&quot;;
+padding-left:20px;
+padding-rght: 20px;
+background-color: rgb(95, 95, 112);
+}
+
+
+QLineEdit::hover{
+border: 2px solid rgb(43, 153, 213);
+}
+
+QLineEdit::focus{
+border: 2px solid rgb(170, 255, 255);
+background-color:rgb(43,45,56);
+}</string>
+    </property>
+    <property name="placeholderText">
+     <string>Address</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtAddMemberEmail">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>200</y>
+      <width>421</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+border: 2px solid rgb(96, 101, 124);
+border-radius: 15px;
+color: rgb(255, 255, 255);
+font: 12pt &quot;Century Gothic&quot;;
+padding-left:20px;
+padding-rght: 20px;
+background-color: rgb(95, 95, 112);
+}
+
+
+QLineEdit::hover{
+border: 2px solid rgb(43, 153, 213);
+}
+
+QLineEdit::focus{
+border: 2px solid rgb(170, 255, 255);
+background-color:rgb(43,45,56);
+}</string>
+    </property>
+    <property name="placeholderText">
+     <string>Email</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox">
+    <property name="geometry">
+     <rect>
+      <x>197</x>
+      <y>150</y>
+      <width>261</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/*-----QDoubleSpinBox -*
+
+	background-color: rgb(117, 129, 138);
+	color : #fff;
+	border: 1px solid #1d1d1d;
+	border-radius: 15px;
+	padding: 3px;
+	padding-left: 5px;
+	padding-right: 10px;
+
+
+/*QComboBox::up-button
+{
+	background-color: #4a5157;
+    width: 16px; 
+	border-top-right-radius: 4px;
+    border-width: 1px;
+	border-color: #1d1d1d;
+
+}
+
+
+QComboBox::up-button:hover
+{
+	background-color: #585858;
+
+}*/
+
+/*QComboBox::up-button:pressed
+{
+	background-color: #252525;
+    width: 16px; 
+    border-width: 1px;
+
+}
+
+
+ QComboBox::up-arrow
+{
+    image: url(://arrow-up.png);
+    width: 7px;
+    height: 7px;
+
+}
+
+
+QComboBox::item::down-button
+{
+	background-color: #4a5157;
+    width: 16px; 
+    border-width: 1px;
+	border-bottom-right-radius: 4px;
+	border-color: #1d1d1d;
+
+}
+
+
+QComboBox::down-button:hover
+{
+	background-color: #585858;
+
+}
+
+
+QComboBox::down-button:pressed
+{
+	background-color: #252525;
+    width: 16px; 
+    border-width: 1px;
+
+}
+
+
+QComboBox::down-arrow
+{
+    image: url(://arrow-down.png);
+    width: 7px;
+    height: 5px;
+
+}
+
+
+
+/*-----QComboBox-----*/
+QComboBox
+{
+    
+	background-color: rgb(95, 95, 112);
+    padding-left: 6px;
+    color: #fff;
+    height: 20px;
+	border-radius: 10px;
+
+
+}
+
+
+/*QComboBox::disabled
+{
+	background-color: #404	margin-right: 10px;040;
+	color: #656565;
+	border-color: #051a39;
+
+}*/
+
+QComboBox:on
+{
+    background-color: #4a5157;
+	color: #fff;
+
+}
+
+
+/*QComboBox QAbstractItemView
+{
+    background-color: #4a5157;
+    color: #fff;
+    selection-background-color: #002b2b;
+	selection-color: #fff;
+    outline: 0;
+
+}*/
+
+
+QComboBox::drop-down
+{
+	background-color: #4a5157;
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+	border-radius: 6px;
+    width: 30px;
+
+}
+
+
+QComboBox::down-arrow
+{
+    image: url(://arrow-down.png);
+    width: 8px;
+    height: 8px;
+
+}
+
+QComboBox::hover{
+border: 2px solid rgb(43, 153, 213);
+}
+
+QComboBox::focus{
+border: 2px solid rgb(170, 255, 255);
+background-color:rgb(43,45,56);
+}</string>
+    </property>
+    <property name="editable">
+     <bool>false</bool>
+    </property>
+    <property name="placeholderText">
+     <string>Overdue Reminder</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="addBookTabFrame">
+   <property name="geometry">
+    <rect>
+     <x>132</x>
+     <y>90</y>
+     <width>191</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(58, 58, 68);
+border-radius: 16px;</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="addBookTtle">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>12</pointsize>
+      <weight>9</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+font: 75 12pt &quot;Century Gothic&quot;;</string>
+    </property>
+    <property name="text">
+     <string>ADD MEMBER</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <zorder>addBookTabFrame</zorder>
+  <zorder>txtaddbook</zorder>
+  <zorder>sideFrame</zorder>
+  <zorder>btnSaveMember</zorder>
+  <zorder>AddMemberFormFrame</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

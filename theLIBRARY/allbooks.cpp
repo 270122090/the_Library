@@ -1,15 +1,16 @@
 #include "allbooks.h"
 
 
-AllBooks::AllBooks(QString t, QString a, QString d, QString s, QString id, int q, QString image)
+AllBooks::AllBooks(QString t, QString a, QString d, QString s, QString id, QString image, QString dd)
 {
     title = t;
     author = a;
     dewey = d;
     status = s;
     uniqueid = id;
-    qty = q;
+    //qty = q;
     bookimageFilePath = image;
+    duedate = dd;
 }
 
 
@@ -73,11 +74,21 @@ QString AllBooks::getid() const
 {
     return uniqueid;
 }
-void AllBooks::setqty (int q)
+//void AllBooks::setqty (int q)
+//{
+//     qty = q;
+//}
+//int AllBooks::getqty() const
+//{
+//    return qty;
+//}
+
+void AllBooks::setdd (QString dd)
 {
-     qty = q;
+    duedate = dd;
 }
-int AllBooks::getqty() const
+QString AllBooks::getdd() const
 {
-    return qty;
+    return duedate;
+
 }

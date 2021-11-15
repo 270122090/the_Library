@@ -16,10 +16,7 @@ public:
     ~AddBook();
 
        void loadbookimage();
-       void on_btnsavebook_clicked();
-       //void on_btnexitaddbook_clicked();
-
-
+       void save_a_book();
 
 private:
     Ui::AddBook *ui;

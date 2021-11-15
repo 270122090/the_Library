@@ -9,7 +9,6 @@
 #include <updatebook.h>
 #include <allbooks.h>
 #include <allmembers.h>
-#include <addmember.h>
 
 
 QT_BEGIN_NAMESPACE
@@ -27,23 +26,32 @@ public:
     void add_a_Book();
     void search_a_Book();
     void remove_a_Book();
+    void update_a_Book();
+    void issue_a_Book();
+
+    void loadbooks();
+    void displayBookDetails();
+    void loadBookOut();
+
+
 
     void add_a_member();
     void search_a_member();
+    void loadmembers(); // NH
 
-    //void loaditem();
-    void displayBookDetails();
-    void update_a_Book();
+
+private slots:
+
+
 
 
 private:
     Ui::MainWindow *ui;
-    AddBook *admin_addbook;
-    updatebook *admin_updatebook;
+    //AddBook *admin_addbook;
+    //updatebook *admin_updatebook;
 
     QVector <AllBooks*> booklist;
     QVector <AllMembers*> memberList;
-
 
 };
 #endif // MAINWINDOW_H

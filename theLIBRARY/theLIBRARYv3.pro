@@ -13,27 +13,32 @@ SOURCES += \
     addmember.cpp \
     allbooks.cpp \
     allmembers.cpp \
+    issuebook.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
-    updatebook.cpp
+    updatebook.cpp \
+    updatemember.cpp
 
 HEADERS += \
     addbook.h \
     addmember.h \
     allbooks.h \
     allmembers.h \
+    issuebook.h \
     login.h \
     mainwindow.h \
-    updatebook.h
+    updatebook.h \
+    updatemember.h
 
 FORMS += \
     addbook.ui \
     addmember.ui \
+    issuebook.ui \
     login.ui \
     mainwindow.ui \
-    newLogin.ui \
-    updatebook.ui
+    updatebook.ui \
+    updatemember.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

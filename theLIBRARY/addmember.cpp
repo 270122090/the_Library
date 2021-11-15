@@ -1,17 +1,20 @@
+#include "mainwindow.h"
 #include "addmember.h"
 #include "ui_addmember.h"
 
 #include <QMessageBox>
 
 addMember::addMember(AllMembers*& newMember, QWidget *parent) :
+
     QDialog(parent),
+
+
     ui(new Ui::addMember)
 {
     ui->setupUi(this);
     this->newMember = &newMember;
 
-    connect(ui->btnSaveMember, &QPushButton::clicked,
-            this, &addMember::on_btnSaveMember_clicked);
+    connect(ui->btnSaveMember, &QPushButton::clicked, this, &addMember::on_btnSaveMember_clicked);
 
 }
 

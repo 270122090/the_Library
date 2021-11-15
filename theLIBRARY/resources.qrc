@@ -3,7 +3,4 @@
         <file>loginImage/astronaut.png</file>
         <file>loginImage/Tech-Background.png</file>
     </qresource>
-    <qresource prefix="/">
-        <file>loginImage/astronaut.png</file>
-    </qresource>
 </RCC>

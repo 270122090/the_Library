@@ -4,7 +4,6 @@
 #include <QMessageBox>
 #include <QPixmap>
 
-
 login::login(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::login)
@@ -24,7 +23,6 @@ login::login(QWidget *parent) :
     QPixmap pix2(":/resources/loginImage/astronaut.png");
     ui->labelAstronaut->setPixmap(pix2);
     ui->labelAstronaut->setScaledContents(true);
-
 }
 
 
