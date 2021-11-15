@@ -333,26 +333,35 @@ void MainWindow::search_a_member()
 {
 
     QString search=ui->txtSearchMember->text();
-    if (search != "text.txt")
-    {
-        for(int i = 0; i < ui->listMember->count(); i++)
-        {
-            ui->listMember->item(i)->setHidden(true);// found
 
-        }
-    }
-
-    else
+    if (search != "")
     {
-        for(int i = 0; i < ui->listMember->count(); i++)
+        for (int i = 0; i < ui->listMember->count(); i++)
         {
+            QListWidgetItem* user = ui->listMember->item(i);
+            user->setBackground(Qt::transparent);
+            //user->setHidden(false);// found
+
+         }
+
             QList<QListWidgetItem *> list = ui->listMember->findItems(search, Qt::MatchContains);
+
             for(int i = 0; i < list.count(); ++i)
             {
-            ui->listMember->item(i)->setHidden(false); // not found
+                QListWidgetItem * user = list.at(i);
+                user->setBackground(Qt::cyan);
+                //user->setHidden(false);
             }
 
-        }
+    }
+    else if (search=="")
+    {
+        for (int i = 0; i < ui->listMember->count(); i++)
+        {
+            QListWidgetItem* user = ui->listMember->item(i);
+            user->setBackground(Qt::transparent);
+
+         }
     }
 }
 

@@ -30,6 +30,8 @@ addMember::~addMember()
     QString memberEmail= ui->txtMemberEmail->text();
 }*/
 
+
+/// Member Save Button -----------------------------------------------------------------------------------------------
 void addMember::on_btnSaveMember_clicked()
 {
     QString memberName = ui->txtMemberName->text();

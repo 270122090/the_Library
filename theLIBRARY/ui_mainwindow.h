@@ -10,9 +10,9 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
+#include <QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QFrame>
+#include <QFrame>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
@@ -225,7 +225,7 @@ public:
         label_17 = new QLabel(layoutWidget);
         label_17->setObjectName(QString::fromUtf8("label_17"));
         QFont font1;
-        font1.setFamilies({QString::fromUtf8("Yu Gothic UI")});
+        font1.setFamily({QString::fromUtf8("Yu Gothic UI")});
         font1.setPointSize(11);
         font1.setBold(false);
         font1.setItalic(false);
@@ -292,7 +292,7 @@ public:
         label_25->setObjectName(QString::fromUtf8("label_25"));
         label_25->setGeometry(QRect(130, 40, 51, 21));
         QFont font2;
-        font2.setFamilies({QString::fromUtf8("Nirmala UI")});
+        font2.setFamily({QString::fromUtf8("Nirmala UI")});
         font2.setPointSize(10);
         font2.setBold(false);
         font2.setItalic(false);

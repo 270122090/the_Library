@@ -48,7 +48,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <property name="iconSize">
      <size>
@@ -946,7 +946,7 @@ color: black;</string>
      <x>0</x>
      <y>0</y>
      <width>1038</width>
-     <height>26</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuLibrarian">

@@ -17,7 +17,7 @@ AllMembers::AllMembers(QString Name, QString Number, QString Email)
 //    book3 = three;
 //}
 
-// Name
+/// Name -------------------------------------------------------
 void AllMembers::setMemberName(QString MemberName)
 {
     this->Name = MemberName;

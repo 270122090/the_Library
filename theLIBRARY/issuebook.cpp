@@ -7,6 +7,7 @@
 #include <QMessageBox>
 #include <QDate>
 #include <QLineEdit>
+#include <QTextStream>
 
 
         //Constructor for books
