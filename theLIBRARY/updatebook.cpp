@@ -14,14 +14,18 @@ updatebook::updatebook(AllBooks* updateBook, QWidget *parent) :
     ui->setupUi(this);
     this->updateBook= updateBook;
 
+    ui->updatecombo->addItem("On Shelf");
+    ui->updatecombo->addItem("On Loan");
+    ui->updatecombo->addItem("Reserved");
+    ui->updatecombo->addItem("Overdue");
+    ui->updatecombo->addItem("Lost/Damaged");
 
     if (updateBook!= nullptr)
     {
         ui->uBookTitle->setText(updateBook->gettitle());
+        ui->currentstatus->setText(updateBook->getstatus());
 
-        ui->uStatus->setText(updateBook->getstatus());
 
-        ui->uQty->setValue(updateBook->getqty());
         QPixmap pixmap(updateBook->getimage());
 
     }
@@ -36,15 +40,14 @@ updatebook::~updatebook()
 }
 
 
-
+// this is not pusing the
 void updatebook:: Bookupdate()
 {
-    int quantity = ui->uQty->value();
-    QString status = ui->uStatus->text();
 
-    if(status != "" && quantity>=1)
+    QString status = ui->currentstatus->text();
+
+    if(status != "")
     {
-        updateBook->setqty(quantity);
         updateBook->setstatus(status);
         this->close();
     }

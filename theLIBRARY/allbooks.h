@@ -13,11 +13,11 @@ private:
     QString status;
     QString bookimageFilePath;
     QString uniqueid;
-    int qty;
+    QString duedate;
 
 
 public:
-    AllBooks(QString t, QString a, QString d, QString s, QString id, int q, QString image = "none.png");
+    AllBooks(QString t, QString a, QString d, QString s, QString id, QString image = "none.png", QString dd = "");
 
     void settitle(QString t);
     QString gettitle() const;
@@ -37,8 +37,11 @@ public:
     void setid (QString id);
     QString getid() const;
 
-    void setqty (int q);
-    int getqty() const;
+//    void setqty (int q);
+//    int getqty() const;
+
+    void setdd (QString dd);
+    QString getdd() const;
 
 
 };

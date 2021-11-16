@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1315</width>
-    <height>641</height>
+    <width>1042</width>
+    <height>631</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,8 +16,8 @@
   <widget class="QFrame" name="frame">
    <property name="geometry">
     <rect>
-     <x>60</x>
-     <y>20</y>
+     <x>20</x>
+     <y>10</y>
      <width>1001</width>
      <height>611</height>
     </rect>
@@ -31,31 +31,11 @@
    <property name="frameShadow">
     <enum>QFrame::Plain</enum>
    </property>
-   <widget class="QLineEdit" name="txtaddauthor">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>190</y>
-      <width>271</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtadddewey">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>250</y>
-      <width>271</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
    <widget class="QPushButton" name="btnloadbookimage">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>390</y>
+      <x>870</x>
+      <y>460</y>
       <width>80</width>
       <height>22</height>
      </rect>
@@ -67,8 +47,8 @@
    <widget class="QLabel" name="addbookimagebox">
     <property name="geometry">
      <rect>
-      <x>610</x>
-      <y>160</y>
+      <x>680</x>
+      <y>80</y>
       <width>271</width>
       <height>361</height>
      </rect>
@@ -78,101 +58,6 @@
     </property>
     <property name="text">
      <string/>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtaddid">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>280</y>
-      <width>271</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtaddbook">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>160</y>
-      <width>271</width>
-      <height>21</height>
-     </rect>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>160</y>
-      <width>47</width>
-      <height>14</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Title</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>220</y>
-      <width>47</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Status</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>250</y>
-      <width>47</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Dewey</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>190</y>
-      <width>47</width>
-      <height>14</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Author</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>180</x>
-      <y>280</y>
-      <width>47</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>ID</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="txtaddStatus">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>220</y>
-      <width>271</width>
-      <height>21</height>
-     </rect>
     </property>
    </widget>
    <widget class="QLabel" name="LibraryTitle_3">
@@ -205,8 +90,8 @@ color: white;</string>
    <widget class="QSplitter" name="splitter">
     <property name="geometry">
      <rect>
-      <x>420</x>
-      <y>570</y>
+      <x>810</x>
+      <y>560</y>
       <width>150</width>
       <height>23</height>
      </rect>
@@ -220,28 +105,67 @@ color: white;</string>
      </property>
     </widget>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QWidget" name="">
     <property name="geometry">
      <rect>
-      <x>180</x>
-      <y>330</y>
-      <width>101</width>
-      <height>16</height>
+      <x>40</x>
+      <y>90</y>
+      <width>511</width>
+      <height>361</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Number of Books</string>
-    </property>
-   </widget>
-   <widget class="QSpinBox" name="spinQty">
-    <property name="geometry">
-     <rect>
-      <x>300</x>
-      <y>330</y>
-      <width>271</width>
-      <height>22</height>
-     </rect>
-    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Dewey</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Author</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>ID</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="2">
+      <widget class="QLineEdit" name="txtaddid"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Status</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLineEdit" name="txtaddbook"/>
+     </item>
+     <item row="3" column="2">
+      <widget class="QLineEdit" name="txtadddewey"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Title</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="2">
+      <widget class="QLineEdit" name="txtaddauthor"/>
+     </item>
+     <item row="2" column="2">
+      <widget class="QComboBox" name="addstatus"/>
+     </item>
+    </layout>
    </widget>
   </widget>
  </widget>
