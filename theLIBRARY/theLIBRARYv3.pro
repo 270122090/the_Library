@@ -13,7 +13,6 @@ SOURCES += \
     addmember.cpp \
     allbooks.cpp \
     allmembers.cpp \
-    issuebook.cpp \
     login.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -24,7 +23,6 @@ HEADERS += \
     addmember.h \
     allbooks.h \
     allmembers.h \
-    issuebook.h \
     login.h \
     mainwindow.h \
     updatebook.h
@@ -32,7 +30,6 @@ HEADERS += \
 FORMS += \
     addbook.ui \
     addmember.ui \
-    issuebook.ui \
     login.ui \
     mainwindow.ui \
     updatebook.ui

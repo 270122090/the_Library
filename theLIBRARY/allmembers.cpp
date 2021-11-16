@@ -1,21 +1,21 @@
 #include "allmembers.h"
 
-AllMembers::AllMembers(QString Name, QString Number, QString Email)
-{
-    this->Name = Name;
-    this->Number = Number;
-    this->Email = Email;
-}
-
-//AllMembers::AllMembers(QString Name, QString Number, QString Email, QString one,QString two,QString three)
+//AllMembers::AllMembers(QString Name, QString Number, QString Email)
 //{
 //    this->Name = Name;
 //    this->Number = Number;
 //    this->Email = Email;
-//    book1 = one;
-//    book2 = two;
-//    book3 = three;
 //}
+
+AllMembers::AllMembers(QString Name, QString Number, QString Email, QString one,QString two,QString three)
+{
+    this->Name = Name;
+    this->Number = Number;
+    this->Email = Email;
+    book1 = one;
+    book2 = two;
+    book3 = three;
+}
 
 // Name
 void AllMembers::setMemberName(QString MemberName)

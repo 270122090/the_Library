@@ -1,2 +1,5 @@
 Dune,Frank Herbet,FRA,On Shelf,01-72434-001,./images/Dune.png,
-A Throne of Glass,Sarah J. Mass,SAR,On Shelf,01-3268279-001,./images/Throne of Glass.png,
+Ender's Game
+,Orson Scott Card
+,ORS,On Shelf,01-72435-001
+,./images/Ender's Game.png,

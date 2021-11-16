@@ -52,6 +52,7 @@ void AddBook::save_a_book()
     QString dd = "";
 
 
+
     if (bookID.trimmed() != "" && bookName.trimmed() != "")
     {
         *newbook = new AllBooks(bookName,bookAuthor,bookDewey,bookStatus,bookID,bookpath,dd);

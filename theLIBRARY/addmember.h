@@ -18,8 +18,7 @@ public:
     explicit addMember(AllMembers*& newMember, QWidget *parent = nullptr);
     ~addMember();
 
-    //void confirmAdd();
-    void on_btnSaveMember_clicked(); // NH moved from private to public
+    //void on_btnSaveMember_clicked(); // NH moved from private to public
 
 private:
     Ui::addMember *ui;

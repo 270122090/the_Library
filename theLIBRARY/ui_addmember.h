@@ -13,10 +13,12 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QFrame>
+#include <QtWidgets/QGridLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
@@ -24,20 +26,19 @@ class Ui_addMember
 {
 public:
     QFrame *frame;
-    QPushButton *btnExitAddMember;
-    QLabel *memberName_label;
+    QLabel *LibraryTitle_4;
+    QWidget *widget;
+    QGridLayout *gridLayout;
+    QLabel *phoneNumber_label;
+    QLabel *emailtxt;
+    QLabel *phone_label;
     QLineEdit *txtMemberName;
     QRadioButton *radioButtonNO_2;
-    QLabel *Addresstxt;
-    QRadioButton *radioButtonYES_2;
-    QLabel *emailtxt;
-    QLabel *phoneNumber_label;
-    QLabel *phone_label;
-    QPushButton *btnSaveMember;
-    QLineEdit *txtMemberAddress;
     QLineEdit *txtMemberPhone;
     QLineEdit *txtMemberEmail;
-    QLabel *LibraryTitle_4;
+    QLabel *memberName_label;
+    QRadioButton *radioButtonYES_2;
+    QPushButton *btnSaveMember;
 
     void setupUi(QDialog *addMember)
     {
@@ -50,62 +51,77 @@ public:
         frame->setStyleSheet(QString::fromUtf8("background-color: rgb(223, 233, 239);"));
         frame->setFrameShape(QFrame::StyledPanel);
         frame->setFrameShadow(QFrame::Plain);
-        btnExitAddMember = new QPushButton(frame);
-        btnExitAddMember->setObjectName(QString::fromUtf8("btnExitAddMember"));
-        btnExitAddMember->setGeometry(QRect(640, 300, 73, 23));
-        btnExitAddMember->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        memberName_label = new QLabel(frame);
-        memberName_label->setObjectName(QString::fromUtf8("memberName_label"));
-        memberName_label->setGeometry(QRect(313, 120, 47, 14));
-        memberName_label->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        txtMemberName = new QLineEdit(frame);
-        txtMemberName->setObjectName(QString::fromUtf8("txtMemberName"));
-        txtMemberName->setGeometry(QRect(433, 120, 271, 21));
-        radioButtonNO_2 = new QRadioButton(frame);
-        radioButtonNO_2->setObjectName(QString::fromUtf8("radioButtonNO_2"));
-        radioButtonNO_2->setGeometry(QRect(513, 180, 51, 19));
-        radioButtonNO_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        Addresstxt = new QLabel(frame);
-        Addresstxt->setObjectName(QString::fromUtf8("Addresstxt"));
-        Addresstxt->setGeometry(QRect(313, 240, 61, 16));
-        Addresstxt->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        radioButtonYES_2 = new QRadioButton(frame);
-        radioButtonYES_2->setObjectName(QString::fromUtf8("radioButtonYES_2"));
-        radioButtonYES_2->setGeometry(QRect(433, 180, 51, 19));
-        radioButtonYES_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        emailtxt = new QLabel(frame);
-        emailtxt->setObjectName(QString::fromUtf8("emailtxt"));
-        emailtxt->setGeometry(QRect(313, 210, 47, 16));
-        emailtxt->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        phoneNumber_label = new QLabel(frame);
-        phoneNumber_label->setObjectName(QString::fromUtf8("phoneNumber_label"));
-        phoneNumber_label->setGeometry(QRect(313, 180, 111, 16));
-        phoneNumber_label->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        phone_label = new QLabel(frame);
-        phone_label->setObjectName(QString::fromUtf8("phone_label"));
-        phone_label->setGeometry(QRect(313, 150, 91, 16));
-        phone_label->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        btnSaveMember = new QPushButton(frame);
-        btnSaveMember->setObjectName(QString::fromUtf8("btnSaveMember"));
-        btnSaveMember->setGeometry(QRect(563, 300, 73, 23));
-        btnSaveMember->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
-        txtMemberAddress = new QLineEdit(frame);
-        txtMemberAddress->setObjectName(QString::fromUtf8("txtMemberAddress"));
-        txtMemberAddress->setGeometry(QRect(433, 240, 271, 21));
-        txtMemberPhone = new QLineEdit(frame);
-        txtMemberPhone->setObjectName(QString::fromUtf8("txtMemberPhone"));
-        txtMemberPhone->setGeometry(QRect(433, 150, 271, 21));
-        txtMemberEmail = new QLineEdit(frame);
-        txtMemberEmail->setObjectName(QString::fromUtf8("txtMemberEmail"));
-        txtMemberEmail->setGeometry(QRect(433, 210, 271, 21));
         LibraryTitle_4 = new QLabel(frame);
         LibraryTitle_4->setObjectName(QString::fromUtf8("LibraryTitle_4"));
-        LibraryTitle_4->setGeometry(QRect(463, 40, 209, 30));
+        LibraryTitle_4->setGeometry(QRect(410, 40, 209, 30));
         LibraryTitle_4->setMaximumSize(QSize(16777215, 30));
         LibraryTitle_4->setStyleSheet(QString::fromUtf8("background: rgba(40, 83, 107, 1);\n"
 "font: 75 9pt \"Yu Gothic UI\";\n"
 "color: white;"));
         LibraryTitle_4->setAlignment(Qt::AlignCenter);
+        widget = new QWidget(frame);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(230, 150, 561, 311));
+        gridLayout = new QGridLayout(widget);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
+        gridLayout->setContentsMargins(0, 0, 0, 0);
+        phoneNumber_label = new QLabel(widget);
+        phoneNumber_label->setObjectName(QString::fromUtf8("phoneNumber_label"));
+        phoneNumber_label->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+
+        gridLayout->addWidget(phoneNumber_label, 2, 0, 1, 1);
+
+        emailtxt = new QLabel(widget);
+        emailtxt->setObjectName(QString::fromUtf8("emailtxt"));
+        emailtxt->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+
+        gridLayout->addWidget(emailtxt, 3, 0, 1, 1);
+
+        phone_label = new QLabel(widget);
+        phone_label->setObjectName(QString::fromUtf8("phone_label"));
+        phone_label->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+
+        gridLayout->addWidget(phone_label, 1, 0, 1, 1);
+
+        txtMemberName = new QLineEdit(widget);
+        txtMemberName->setObjectName(QString::fromUtf8("txtMemberName"));
+
+        gridLayout->addWidget(txtMemberName, 0, 1, 1, 3);
+
+        radioButtonNO_2 = new QRadioButton(widget);
+        radioButtonNO_2->setObjectName(QString::fromUtf8("radioButtonNO_2"));
+        radioButtonNO_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+
+        gridLayout->addWidget(radioButtonNO_2, 2, 2, 1, 1);
+
+        txtMemberPhone = new QLineEdit(widget);
+        txtMemberPhone->setObjectName(QString::fromUtf8("txtMemberPhone"));
+
+        gridLayout->addWidget(txtMemberPhone, 1, 1, 1, 3);
+
+        txtMemberEmail = new QLineEdit(widget);
+        txtMemberEmail->setObjectName(QString::fromUtf8("txtMemberEmail"));
+
+        gridLayout->addWidget(txtMemberEmail, 3, 1, 1, 3);
+
+        memberName_label = new QLabel(widget);
+        memberName_label->setObjectName(QString::fromUtf8("memberName_label"));
+        memberName_label->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+
+        gridLayout->addWidget(memberName_label, 0, 0, 1, 1);
+
+        radioButtonYES_2 = new QRadioButton(widget);
+        radioButtonYES_2->setObjectName(QString::fromUtf8("radioButtonYES_2"));
+        radioButtonYES_2->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+
+        gridLayout->addWidget(radioButtonYES_2, 2, 1, 1, 1);
+
+        btnSaveMember = new QPushButton(widget);
+        btnSaveMember->setObjectName(QString::fromUtf8("btnSaveMember"));
+        btnSaveMember->setStyleSheet(QString::fromUtf8("color: rgb(0, 0, 0);"));
+
+        gridLayout->addWidget(btnSaveMember, 4, 3, 1, 1);
+
 
         retranslateUi(addMember);
 
@@ -115,16 +131,14 @@ public:
     void retranslateUi(QDialog *addMember)
     {
         addMember->setWindowTitle(QCoreApplication::translate("addMember", "Dialog", nullptr));
-        btnExitAddMember->setText(QCoreApplication::translate("addMember", "Exit", nullptr));
-        memberName_label->setText(QCoreApplication::translate("addMember", "Name:", nullptr));
-        radioButtonNO_2->setText(QCoreApplication::translate("addMember", "No", nullptr));
-        Addresstxt->setText(QCoreApplication::translate("addMember", "Address:", nullptr));
-        radioButtonYES_2->setText(QCoreApplication::translate("addMember", "Yes", nullptr));
-        emailtxt->setText(QCoreApplication::translate("addMember", "Email:", nullptr));
-        phoneNumber_label->setText(QCoreApplication::translate("addMember", "Phone reminders:", nullptr));
-        phone_label->setText(QCoreApplication::translate("addMember", "Mobile Phone:", nullptr));
-        btnSaveMember->setText(QCoreApplication::translate("addMember", "Save", nullptr));
         LibraryTitle_4->setText(QCoreApplication::translate("addMember", "ADD NEW MEMBER", nullptr));
+        phoneNumber_label->setText(QCoreApplication::translate("addMember", "Phone reminders:", nullptr));
+        emailtxt->setText(QCoreApplication::translate("addMember", "Email:", nullptr));
+        phone_label->setText(QCoreApplication::translate("addMember", "Mobile Phone:", nullptr));
+        radioButtonNO_2->setText(QCoreApplication::translate("addMember", "No", nullptr));
+        memberName_label->setText(QCoreApplication::translate("addMember", "Name:", nullptr));
+        radioButtonYES_2->setText(QCoreApplication::translate("addMember", "Yes", nullptr));
+        btnSaveMember->setText(QCoreApplication::translate("addMember", "Save", nullptr));
     } // retranslateUi
 
 };

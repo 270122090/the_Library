@@ -23,32 +23,38 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    void add_a_Book();
-    void search_a_Book();
-    void remove_a_Book();
-    void update_a_Book();
-    void issue_a_Book();
+    void add_a_Book();// NH
+    void search_a_Book();//JdS
+    void remove_a_Book();// NH
+    void update_a_Book();//JdS
+    void loadbooks(); //NH
+    void displayBookDetails();// NH
 
-    void loadbooks();
-    void displayBookDetails();
-    void loadBookOut();
+    void issue_a_Book();// NH
+    void clear_a_Book();
 
+    void load_i_book();// NH
+    void display_i_BookDetails();// NH
+    void search_i_Book(); //JdS
 
+    void load_o_Book();// NH
+    void display_o_BookDetails();// NH
 
-    void add_a_member();
-    void search_a_member();
+    void add_a_member();//JdS // NH
+    void search_a_member();//JdS
     void loadmembers(); // NH
+    void displayMemberDetails();// NH
+
+    void search_i_member();// NH
+    void load_i_members();// NH
+    void display_i_MemberDetails();// NH
 
 
-private slots:
-
-
+    void overduereminder();
 
 
 private:
     Ui::MainWindow *ui;
-    //AddBook *admin_addbook;
-    //updatebook *admin_updatebook;
 
     QVector <AllBooks*> booklist;
     QVector <AllMembers*> memberList;
