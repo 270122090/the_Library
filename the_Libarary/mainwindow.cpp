@@ -179,6 +179,7 @@ void MainWindow::update_a_member()// * working
 
         memberList.clear(); //clear data model
         ui->listMember->clear(); // view / ui
+        ui->listiMember->clear();
 
         while(!in.atEnd())
         {
@@ -205,15 +206,6 @@ void MainWindow::display_memberlist()// * working
     inputFile.open(QIODevice::ReadOnly | QIODevice::Text);
 
     QTextStream in(&inputFile);
-
-    //clear current list and vector
-    for (AllMembers* temp:memberList)
-    {
-        delete temp;
-    }
-
-    memberList.clear(); //clear data model
-    ui->listMember->clear(); // view / ui
 
     while(!in.atEnd())
     {
@@ -293,7 +285,7 @@ void MainWindow::add_a_Book() // * Working
     if (newBook != nullptr)
     {
         booklist.push_back(newBook);
-        ui->listBooks->addItem("     "+newBook->getid()+"     " +newBook->gettitle()+"   " + newBook->getauthor());
+        ui->listBooks->addItem("     "+newBook->getid()+"     " +newBook->gettitle()+"      " +newBook->getauthor());
     }
 
     QFile bookfile("books.txt");
@@ -367,8 +359,9 @@ void MainWindow::update_a_Book()
 
 
             QFile bookFile("books.txt");
-            bookFile.open(QIODevice::WriteOnly|QIODevice::Append | QIODevice::Text);
+            bookFile.open(QIODevice::WriteOnly| QIODevice::Text);
             QTextStream out(&bookFile);
+
             for(int i=0;i<booklist.size();i++)
             {
                 out << booklist.at(i)->gettitle()<<",";
@@ -383,6 +376,34 @@ void MainWindow::update_a_Book()
             }
                 out.flush();
                 bookFile.close();
+
+                QFile inputFile("books.txt");
+                inputFile.open(QIODevice::ReadOnly | QIODevice::Text);
+
+                QTextStream in(&inputFile);
+
+                for (AllBooks* temp:booklist)
+                {
+                    delete temp;
+                }
+
+                booklist.clear(); //clear data model
+                ui->listBooks->clear(); // view / ui
+                ui->listiBooks->clear();
+
+                while(!in.atEnd())
+                {
+                    QString line = in.readLine();
+                    QStringList bookinfo = line.split(",");
+
+                    ui->listBooks->addItem("     "+bookinfo.at(0)+"      " +bookinfo.at(0)+"      "+bookinfo.at(1));
+                    ui->listiBooks->addItem("     "+bookinfo.at(0)+"      " +bookinfo.at(0)+"      " +bookinfo.at(1));
+
+                    AllBooks* bookproduct = new AllBooks(bookinfo.at(0), bookinfo.at(1),bookinfo.at(2), bookinfo.at(3), bookinfo.at(4), bookinfo.at(5), bookinfo.at(6));
+                    booklist.push_back(bookproduct);
+                 }
+                    in.flush();
+                    inputFile.close();
 
         }
 }
@@ -473,8 +494,8 @@ void MainWindow::display_booklist()// * working
         QStringList bookinfo = line.split(",");
 
         //handle list of products ui
-        ui->listBooks->addItem("  "+bookinfo.at(0)+" , " +bookinfo.at(0)+" , " + bookinfo.at(1));
-        ui->listiBooks->addItem("  "+bookinfo.at(0)+" , " +bookinfo.at(0)+" , " + bookinfo.at(1));
+        ui->listBooks->addItem("     "+bookinfo.at(0)+"      " +bookinfo.at(0)+"      "+bookinfo.at(1));
+        ui->listiBooks->addItem("     "+bookinfo.at(0)+"      " +bookinfo.at(0)+"      " +bookinfo.at(1));
 
         AllBooks* bookproduct = new AllBooks(bookinfo.at(0), bookinfo.at(1),bookinfo.at(2), bookinfo.at(3), bookinfo.at(4), bookinfo.at(5), bookinfo.at(6));
         booklist.push_back(bookproduct);
