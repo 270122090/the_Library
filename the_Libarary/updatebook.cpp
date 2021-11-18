@@ -36,7 +36,7 @@ updatebook::~updatebook()
 void updatebook:: update_the_Book()
 {
 
-  QString status = ui->btnupdatebook_2->text();
+  QString status = ui->boxupdateBook_2->currentText();
 
 
   updatethebook->setstatus(status);
