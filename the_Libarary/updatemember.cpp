@@ -16,7 +16,7 @@ updatemember::updatemember(AllMembers* updatethemember, QWidget *parent) :
         ui->lbluMemberEmail->setText(updatethemember->getEmail());
     }
 
-    connect(ui->btnsaveupdatemember, &QPushButton::clicked, this, &updatemember::update_a_member);
+    connect(ui->btnsaveupdatemember, &QPushButton::clicked, this, &updatemember::update_the_member);
 }
 
 updatemember::~updatemember()
@@ -24,7 +24,7 @@ updatemember::~updatemember()
     delete ui;
 }
 
-void updatemember::update_a_member()
+void updatemember::update_the_member()//working
 {
 
     QString newname = ui->lbluMemberName->text();

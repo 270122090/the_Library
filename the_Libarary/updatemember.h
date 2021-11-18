@@ -17,7 +17,7 @@ public:
     explicit updatemember(AllMembers* updatethemember, QWidget *parent = nullptr);
     ~updatemember();
 
-     void update_a_member();
+     void update_the_member();
 
 
 

@@ -16,7 +16,7 @@ public:
     explicit updatebook(AllBooks* updatethebook, QWidget *parent = nullptr);
     ~updatebook();
 
-    void update_a_Book();
+    void update_the_Book();
 
 private:
     Ui::updatebook *ui;

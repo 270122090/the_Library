@@ -49,7 +49,7 @@ void addbook::save_a_book()
 
     if (bookID.trimmed() != "" && bookName.trimmed() != "")
     {
-        *newbook = new AllBooks(bookName,bookAuthor,bookDewey,bookStatus,bookID,bookpath,dd);
+        *newbook = new AllBooks(bookName,bookAuthor,bookDewey,bookStatus,bookID,dd,bookpath);
         this->close();
     }
     else

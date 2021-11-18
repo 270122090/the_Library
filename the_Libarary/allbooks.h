@@ -17,7 +17,7 @@ private:
 
 
 public:
-    AllBooks(QString t, QString a, QString d, QString s, QString id, QString image = "none.png", QString dd = "");
+    AllBooks(QString t, QString a, QString d, QString s, QString id, QString dd = "", QString image = "none.png");
 
     void settitle(QString t);
     QString gettitle() const;

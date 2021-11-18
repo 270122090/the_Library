@@ -22,7 +22,7 @@ updatebook::updatebook(AllBooks* updatethebook, QWidget *parent) :
       ui->lbluBookTitle->setText(updatethebook->gettitle());
       ui->lbluStatus->setText(updatethebook->getstatus());
   }
-  connect(ui->btnupdatebook_2, &QPushButton::clicked, this,&updatebook::update_a_Book);
+  connect(ui->btnupdatebook_2, &QPushButton::clicked, this,&updatebook::update_the_Book);
 
 }
 
@@ -33,7 +33,7 @@ updatebook::~updatebook()
 
 
 // this is not pusing the
-void updatebook:: update_a_Book()
+void updatebook:: update_the_Book()
 {
 
   QString status = ui->btnupdatebook_2->text();

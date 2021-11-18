@@ -24,7 +24,7 @@ addmember::~addmember()
 
 
 
-void addmember::save_a_member()
+void addmember::save_a_member()//working
 {
     QString memberName = ui->txtMemberName->text();
     QString memberPhone = ui->txtMemberPhone->text();

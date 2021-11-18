@@ -1,7 +1,7 @@
 #include "allbooks.h"
 
 
-AllBooks::AllBooks(QString t, QString a, QString d, QString s, QString id, QString image, QString dd)
+AllBooks::AllBooks(QString t, QString a, QString d, QString s, QString id,  QString dd, QString image)
 {
     title = t;
     author = a;
