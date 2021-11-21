@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/resources">
+        <file>Decorations/astronaut.png</file>
+        <file>Decorations/editBook.png</file>
+        <file>Decorations/fantasyBook.png</file>
+        <file>Decorations/issueAnother.png</file>
+        <file>Decorations/issueBook.png</file>
+        <file>Decorations/openBook.png</file>
+        <file>Decorations/orangeBookmark.png</file>
+        <file>Decorations/returnBook.png</file>
+        <file>Decorations/Tech-Background.png</file>
+        <file>Decorations/sparkleBook.png</file>
+        <file>Decorations/flyingAstronaut.png</file>
+        <file>Decorations/stars.png</file>
+        <file>Decorations/sword.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>Decorations/sitAstronaut.png</file>
+        <file>Decorations/editMember.png</file>
+    </qresource>
+</RCC>
